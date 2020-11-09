@@ -5,391 +5,38 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
 
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="jd.css">
 <!---以上bootstrap会导致js原生轮播图显示1s后图片消失(已解决)css过渡动画问题-->
 <!--轮播图不断快速点击next后会出现异常，1：速度过快；2：仅有2-1自动播放-->
- 
+<!--font-size问题 chrome浏览器font-size属性只能有几种固定大小其中12px为最小-->
 <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-
-<style>
-    div.d1{
-        background-color: rgb(223, 223, 223);
-        width:100%;padding:3px 100px 0px 50px;
-        height:30px;
-    } 
-    li.l1{float:right;padding: 5px;font-size:9px;color: gray;cursor: pointer;}
-    li.l2{padding: 5px;font-size:9px;color: gray;cursor: pointer;}
-    a.a1{font-size: 12px;text-decoration:none;color: rgb(139, 139, 139);}
-  
-    li.l11{float:right;padding: 5px;font-size:9px;cursor: pointer;
-        color:rgb(139,139,139);opacity:0.7;}
-    .dropbtn {
-    padding: 5px;font-size:9px;color: gray;cursor: pointer;
-    border: none;
-}
-
-
-.dropdown {position: relative;display: inline-block;}
-.dropdown-content {display: none;position:fixed;font-size: 9px;background-color: #ffffff;padding:6px 4px 4px 7px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);z-index:2;width:300px;height:auto;}
-.dropdown-content a {color: rgb(139, 139,139);padding:5px 4px 4px 7px;text-decoration: none;display:inline-block}
-.dropdown-content #a1 a:hover {color:#E1251B;text-decoration: none;background-color:rgb(233, 233, 233)}
-.dropdown-content #a2 a:hover {color:#E1251B;text-decoration: none;}
-.dropdown-content #a3 a:hover {color: rgb(139, 139,139);text-decoration: none;}
-.dropdown:hover .dropdown-content {display:inline-block}
-.dropdown:hover .dropbtn {background-color: #ffffff;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);}
-
-.qydropdown-content {display: none;position:fixed;font-size: 9px;background-color: #ffffff;padding:6px 4px 4px 7px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);z-index:2;width:160px;height:auto;}
-.qydropdown-content a {color: rgb(139, 139,139);padding:5px 4px 4px 7px;display:inline-block}
-.qydropdown-content #a1 a:hover {color:#E1251B;text-decoration: none;}
-.qydropdown:hover .qydropdown-content {display:inline-block}
-.qydropdown:hover .dropbtn {background-color: #ffffff;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);}
-
-.qydropdown2-content {display: none;position:fixed;font-size: 9px;background-color: #ffffff;padding:6px 4px 4px 7px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);z-index:2;width:200px;height:auto;  }
-.qydropdown2-content a {color: rgb(139, 139,139);padding:5px 4px 4px 7px;display:inline-block}
-.qydropdown2-content #a1 a:hover {color:#E1251B;text-decoration: none;}
-.qydropdown2:hover .qydropdown2-content {display:inline-block}
-.qydropdown2:hover .dropbtn {background-color: #ffffff;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);}
-
-.qydropdown3-content {display: none;height:auto; left:910px;position:fixed;font-size: 9px;background-color: #ffffff;padding:11px 0px 4px 14px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);z-index:2;width:192px;}
-.qydropdown3-content a {color: rgb(139, 139,139);padding:5px 28px 4px 0px;display:inline-block}
-.qydropdown3-content #a1 a:hover {color:#E1251B;text-decoration: none;}
-.qydropdown3:hover .qydropdown3-content {display:inline-block}
-.qydropdown3:hover .dropbtn {background-color: #ffffff;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);}
-
-.qydropdown4-content {display: none;height:auto; left:80px;position:fixed;font-size: 9px;background-color: #ffffff;padding:11px 0px 4px 14px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);z-index:2;width:1200px;}
-.qydropdown4-content a {color: rgb(139, 139,139);padding:5px 24px 4px 0px;text-decoration: none;display:inline-block}
-.qydropdown4-content #a1 a:hover {color:#E1251B;text-decoration: none;}
-.qydropdown4:hover .qydropdown4-content {text-decoration: none;display:inline-block}
-.qydropdown4:hover .dropbtn {background-color: #ffffff;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);}
-
-.qydropdown5-content {display: none;height:auto;left:1066px;position:fixed;font-size: 9px;background-color: #ffffff;padding:11px 0px 4px 14px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);z-index:2;width:200px;}
-.qydropdown5-content a {color: rgb(139, 139,139);padding:5px 24px 4px 0px;text-decoration: none;display:inline-block}
-.qydropdown5:hover .qydropdown5-content {text-decoration: none;display:inline-block}
-.qydropdown5:hover .dropbtn {background-color:rgb(223,223,223);}
-
-.qydropdown51-content {display: none;height:auto;top:30px;left:1066px;position:fixed;font-size: 9px;background-color: #ffffff;padding:11px 0px 4px 14px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);z-index:2;width:200px;}
-.qydropdown51-content a {color: rgb(139, 139,139);padding:5px 24px 4px 0px;text-decoration: none;display:inline-block}
-.qydropdown51:hover .qydropdown51-content {text-decoration: none;display:inline-block}
-
-.dropleft-content {display: none;width:988px;height:470px;position:fixed;z-index:2;}
-.dropleft-content a {margin: 0px 0px 0px 0px;color:#333333;color: rgb(139, 139,139);text-decoration: none;display:inline-block}
-.dropleft:hover .dropleft-content {text-decoration: none;display:inline-block}
-.dropleft:hover .ljydq  {background-color:rgb(223,223,223);}
-
-
-div.duolie5{column-width:5px;column-count:5;column-gap:1px; }
-div.duolie2{column-width:50px;
-        column-count:2;
-        column-gap:1px;   }
-        div.duolieqy2{  column-width:50px;
-            column-count:2;
-            column-gap:1px;   }
-        div.duolie4{  column-width:50px;
-                    column-count:4;
-                    column-gap:1px;   }div.duolie3{  column-width:50px;
-                        column-count:3;
-                        column-gap:1px;   }
-.l1:hover{
-    color: #E1251B;
-}
-.l2:hover{
-    color: #E1251B;
-}
-a.a1:hover{
-    color: #E1251B;
-}
-a.a11{
-    text-decoration:none;
-    color: #E1251B;}
-a.a11:hover{
-    color:rgb(223, 0,0);;
-}
-img.fgx{opacity:0.05;padding:0 25px 0 5px;width: 290px;;height: 0.5px;}
-img.fgx2{opacity:0.05;padding:0 25px 0 5px;width: 200px;;height: 0.5px;} 
-img.fgx3{opacity:0.05;padding:0 130px 0 0px;width: 275px;;height: 0.5px;} 
-img.fgx4{opacity:0.06;padding:0 0px 0 0px;width:0.13px;height:160px;} 
-img.fgx5{opacity:0.06;padding:0 3px 0 0px;width:100%;height:0.5px;} 
-p.bt{color:rgb(122, 122, 122);font-weight: bolder;font-size:13px;}
-
-a.aw1{text-decoration: none;}
-div.dsj1{width:80px;height:80px;border:1px solid rgb(139, 139 ,139,0.4);float: left;}
-div.dsj2{width:auto;}
-img.isj{float:left;width:78px;height:78px;padding: 2px 2px 2px 2px;}
-p.psj1{ margin:0px; padding:0px;font-weight: bolder;color:rgb(0,0,0,0.55)}
-p.psj2{ margin:0px; padding:0px;color:#E1251B}
-div.dsearch{float:left;padding:0 0 0 0;margin-top: 13px;color:#666666;width:490px;height:36px;background-color: rgb(255, 255, 255);
-    border:2.6px solid #E1251B;}
-    div.dsearchsmall{float:left;padding:0;margin-top: 13px;color:#666666;width:60px;height:36px;background-color: rgb(255, 255, 255);
-        border:3px solid #E1251B;}
-input.search{Color:black;font-size:12px;border:0;outline:none;width:490px;height:30px;margin: 0;}
-button.search{background-color:#E1251B;float:right;float:top;margin:0;width: 58px;height: 32px;border:2.5px solid #E1251B;}
-
-a.a4{cursor: pointer;float:left;margin:0 0 10px 7px;font-size:12px;text-decoration:none;color: #666666;}
-a.a2{margin-left:5px;font-size:12px;text-decoration:none;color: rgb(139, 139, 139);}
-a.a3{margin-left:5px;font-size:12px;text-decoration:none;color:#E1251B;}
-.a2:hover{color:rgb(223, 0,0);text-decoration:none;}
-.a3:hover{color:rgb(223, 0,0);text-decoration:none;}
-.a4:hover{color:rgb(223, 0,0);text-decoration:none;}
-div.dgwc{float:left;padding:0;margin-top: 13px;margin-left: 20px; color:#666666;font:12px;width:132px;height:36px;
-    background-color: rgb(255, 255, 255);
-    border:0.5px solid rgba(170, 170, 170, 0.25);}
-
-input.search[type=text], select {
-    width:460px;border:0px solid rgba(170, 170, 170, 0);padding:2px 10px 2px 17px;margin: 0;
-  }
-
-div.dsj11{width:80px;height:80px;border:1px solid rgb(139, 139 ,139,0.0);float: left;
-    box-shadow: 0px 2px 2px 2px rgba(170, 170, 170, 0.2);}
-
-    img.isj1{ width:80px;height:80px;padding: 7px 7px 7px 7px;}
-a.amiaoshared{color:#E1251B;font-size:15px;font-weight: bolder;margin-right:15px}
-a.amiaosha{color:#333333;font-size:15px;margin-right:15px}
-a.amiaoshared:hover{text-decoration: none;color:#E1251B;cursor: pointer;font-size:15px;font-weight: bolder;margin-right:15px}
-a.amiaosha:hover{text-decoration: none;cursor: pointer;color:#E1251B;font-size:15px;margin-right:15px}
-
-
-div.test{background-color:blue;}
-
-ol.ol1{list-style-type:none;padding: 15px 0px 15px 0px;}
-.ljydq{line-height:25px;margin: 0px 0px 0px 0px;padding:0;background: rgb(255, 255, 255);}
-.ljydq:hover{margin: 0px 0px 0px 0px;background: rgb(139, 139, 139,0.4);  transition-delay:0.2s;}
-
-.ljydq-content{width: 998px;height:470px;padding:0;
-    display: none;position:absolute;background-color: #FFF;margin:0px 0px 0px 190px;box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);z-index:2;}
-.ljydq:hover .ljydq-content {text-decoration: none;display:inline-block}
-.a2jydq{color:rgb(240, 238, 238);font-size:9px;cursor: pointer;margin-right: 20px;padding:5px 8px 5px 13px ;text-decoration:none;background-color: rgba(0, 0, 0, 0.842);}
-.a2jydq1{margin-right: 20px;font-weight: bolder;font-size:9px;text-decoration:none;margin-top:7px;float:left;cursor: pointer;color:rgba(0, 0, 0, 0.795);}
-code.c1{background-color: rgba(0, 0, 0, 0);font-size:14px;color:rgb(240, 238, 238);}
-code.c2{background-color: rgba(48, 28, 28, 0);;font-size:14px;color:rgba(0, 0, 0, 0.795);}
-li.jydq{list-style: none;float: left;}
-a.ri{float:left;font-size:12px;text-decoration:none;margin-top:7px;margin-right:15px;color: #666666;}
-a.ri1{float:left;font-size:12px;text-decoration:none;margin-right:15px;color: #666666;}
-.a2jydq1:hover,a.ri:hover,a.ri1:hover{cursor: pointer;text-decoration: none;color:#E1251B}
-.a2jydq:hover{cursor: pointer;text-decoration: none;background-color: #E1251B;color:rgb(240, 238, 238);}
-.red:hover{cursor: pointer;text-decoration: none;color:#E1251B}
-
-
-
-a.ajydq{margin: 0px 0px 0px 0px;color:#333333}
-a.ajydq1{margin-left:15px;color:#333333}
-span.s1{cursor: pointer}
-a.ajydq:hover{text-decoration: none;color:#E1251B}
-a.ajydq1:hover{margin-left:15px;color:#E1251B;text-decoration: none;}
-
-#imgtx{margin:15px 0 0 20px;
-    border-radius: 40px;
-    box-shadow: 1px 1px 1px 1px rgba(175, 175, 175, 0.2);
-    border:2.5px solid rgb(255, 255, 255);
-    width: 40px;
-    height: 40px;
-    float:left;
-}
-
-#corner1{margin:2px 0 0 20px;
-    border: none;
-    border-radius: 40px  ;  
-    width: 70px;
-    height: 25px;
-    float:left;
-    padding:0 0 0 0px;background-color: #E1251B;
-}#corner1:hover{
-background-color: #c02118;
-}
-#corner2{margin:2px 0 10px 10px;
-    border: none;
-    border-radius: 40px  ;  
-    width: 70px;
-    height: 25px;
-    float:left;
-    padding:0 0 0 0px;background-color: #363634;
-}
-.dl2{color:#E5D790;font-size: 12px;text-decoration: none;cursor: pointer;}
-a.dl2:hover{text-decoration: none;color:#ffffff}
-
-.dl1{color:#ffffff;font-size: 12px;text-decoration: none;cursor: pointer;}
-a.dl1:hover{text-decoration: none;color:#ffffff}
-
-a.a12{
-    float:left;padding: 30px 10px 8px 10px;width: 63px;height: 55px;text-decoration:none;
-}
-a.a12:hover{
-   text-decoration:none;
-}
-
-span.span2{cursor: pointer;text-decoration:none;color:#333333;text-align: center;font-size: 12px;}
-
-
-span.span3{cursor: pointer;color:#E1251B;width:35px;height:12px;background-color: #E1251B14;font-size: 12px;}
-p.span3{font-size:12px;color:#666666;white-space:nowrap; text-overflow:ellipsis;overflow:hidden;}
-a.a1a{font-size: 12px;text-decoration:none;color:#666666;}
-.a1a:hover{text-decoration:none;color: #E1251B;}
-
-a.a1aa{font-size: 12px;text-decoration:none;cursor: pointer;color:#999999;}
-.a1aa:hover{text-decoration:none;color: #E1251B;}
-
-a.a1aaa{color:#666666;margin:0px 0 0 0px;cursor: pointer;font-size: 12px;}
-.a1aaa:hover{text-decoration:none;color: #E1251B;}
-.dq1{background-color: rgb(255, 255, 255);padding:0;margin:0;float:left;width:840px;height:470px;}
-
-
-.tw{padding:0px 0 0 0;margin-left:9px;float:left;width: 189px;height: 230px;}
-
-.iw{margin-top:5px;color:#333333;font-size: large;}
-.dtop{background-color:#8B009B;padding:0;width:100%;height:80px;}
-.dtop2{background-image: url(https://img20.360buyimg.com/babel/jfs/t1/126786/35/16169/57708/5f96621dE9077dfc2/4a4b8154fd446057.png.webp);padding:0;width:1190px;margin: 0 78.5px 0 79.5px;height:80px;background-color: rgba(236, 236, 236, 0.589);}
-.dtop3{float:right;width:20px;height:80px;background-color:#8B009B;}
-
-span.span4{margin-bottom: 10px;margin-right:10px;float: left;font-size: 10px;color: #666666;}
-input.ipt{padding:5px;margin-bottom: 10px;float: left;width:70%;height: 17px; border: 1px solid #ccc;border-radius: 0px;}
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  font-size: 10px;
-}
-p.p1_red{ cursor: pointer;font-size: 10px;color:#E1251B;}
-a.a5_redbutton{margin:0 0 10px 0;cursor: pointer;text-decoration: none;border-radius: 40px;color:white;padding:2px 5px 2px 5px;font-size:10px;background-color: #E1251B;}
-a.a5_bluebutton{margin:0 0 10px 0;cursor: pointer;text-decoration: none;border-radius: 40px;color:white;padding:0px 4px 0px 4px;font-size:xx-small;font-size-adjust: 0.2;background-color: #4fcde4;}
-a.a6_blue{cursor: pointer;text-decoration: none;font-size:9px;}
-div.gs{display:none;padding:0px 0px 20px 8px;}
-select {
-    font-family : inherit;
-    font-size   : 50%;
-    width:70%;height: 17px; 
-    padding:0px 0 2px 0;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    background-color: #ffffff;
-  }
-option{background-color: #fff;font-size:xx-small;left:0;}
-
-* {box-sizing:border-box}
-body {font-family: Verdana,sans-serif;}
-.mySlides {display:none}.mySlides1 {display:none}.mySlides2 {display:none}.mySlides3 {display:none}
-/* 幻灯片容器 */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin-left:9px;float:left;
-}
-/* 下一张 & 上一张 按钮 */
-.prev{
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width:25px;
-  height:35px;
-  margin-top: -22px;
-  padding:5px 0 0 8px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 80px 80px 0;
-  background-color: rgba(0, 0, 0, 0.150);
-}
-
-/* 定位 "下一张" 按钮靠右 */
-.next {
-  right: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width:25px;
-  height:35px;
-  margin-top: -22px;
-  padding:5px 0 0 8px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 80px 0px 0px 80px;
-  background-color: rgba(0, 0, 0, 0.150);
-}
-
-
-/* 标记符号 */
-.dot {
-  cursor:pointer;
-  height: 9px;
-  width: 9px;
-  margin:0 0px 0 0;padding: 0;
-  background-color: #ffffff66;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  height: 12px;
-  width: 12px;
-  border:2px solid #9b9b9b67;
-  background-color: #ffffff;
-  
-}
-
-/* 淡出动画 */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .3} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .3} 
-  to {opacity: 1}
-}
-.prev1{
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width:25px;
-  height:35px;
-  margin-top: -22px;
-  padding:5px 0 0 5px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 80px 80px 0;
-  background-color: rgba(0, 0, 0, 0.150);
-}
-
-/* 定位 "下一张" 按钮靠右 */
-.next1 {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width:25px;
-  height:35px;
-  margin-top:  -22px;
-  margin-left: 165px;
-  padding:5px 0 0 10px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 80px 0px 0px 80px;
-  background-color: rgba(0, 0, 0, 0.150);
-}
-.prev:hover,.next:hover,.prev1:hover,.next1:hover{
-  color:white;
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.308);
-}
-.lb2img:hover{opacity:0.85}
-</style>
-
 
 </head>
-<body>  <div class="dtop">
+<body> <div style="width:1349px">
+    <div class="right_xd_content">
+        <a class="right_xd" onclick="right_content_close();right_content_open()"></a>
+    </div>
+    
+    <div class="search_hide">
+        <a class="search_logo_lk"></a>
+        <div class="dsearch" style="margin-top:0;margin-left:150px;">
+            <input class="search" type="text"><i style="color:rgba(0, 0, 0, 0.192)" class="fa fa-camera"></i></input>
+        </div>
+
+        <div class="dsearchsmall " style="margin-top:0"> 
+            <button class="search"><i style="color:white;font-size: 18px;" class="fa fa-search"></i></button>
+        </div>
+
+        <div class="dgwc" style="margin-right:79.5px;margin-top:0">
+            <div style="float:left;margin: auto; padding: 5px 0 0 4px;width: 75%;">
+            <i style="color:#E1251B" class="fa fa-shopping-cart"></i>
+            <a class="a3" href="">我的购物车</a></div>
+        </div>
+    </div>
+
+    <div class="dtop">
     <div class="dtop2">
         <img style="float:left" src="https://img13.360buyimg.com/img/jfs/t1/128768/1/15594/11305/5f8d3e38E02f2c1af/c6defae33727923e.jpg.webp"> 
         <div class="dtop3">
@@ -398,10 +45,11 @@ body {font-family: Verdana,sans-serif;}
         <img style="margin:18px 20px 0 10px;float:right" src="https://img12.360buyimg.com/babel/jfs/t1/134968/10/13214/5541/5f9241a7E1ce1ce97/2e4187ee5ffab6ab.png.webp"> 
         <img style="margin:18px 0px 0 30px;float:right" src="https://img20.360buyimg.com/babel/jfs/t1/139143/13/11253/3505/5f8d4c05Efebfe81b/8c6483e1c52efecb.png.webp"> 
     </div>
-
 </div>
-    <div id="jd" class="container" style="padding:0;width:100%;height: 4000px;background-color: rgba(236, 236, 236, 0.589);">
-    <div class="container" style="box-shadow: 0px 2px 2px 0px rgba(138, 138, 138, 0.2);padding:0 0 0 0;width:100%;height: 170px;background-color: rgb(255, 255, 255);">
+
+
+    <div id="jd" class="container contain2">
+    <div class="container contain1" >
      
 <div class="container d1">
 	<div class="row clearfix">
@@ -503,7 +151,7 @@ body {font-family: Verdana,sans-serif;}
                         <p class="psj1">&nbsp;手机京东</p>
                         <p class="psj2">&nbsp;新人专享大礼包</p></div>
                         <i style="margin-left:5px;font-size:15px;" class="fa fa-apple"></i>
-                        <i style="margin-left:10px;font-size:15px;color: rgb(83, 214, 100);" class="fa fa-android"></i>
+                        <i class="fa fa-android igreen"></i>
                         <i style="margin-left:10px;font-size:15px;" class="fa fa-tablet"></i>
                     </div>
                     <hr style="margin:0px 5px 10px 5px;width: 90%;">
@@ -525,7 +173,7 @@ body {font-family: Verdana,sans-serif;}
                         <p class="psj1">&nbsp;京东金融客户端</p>
                         <p class="psj2">&nbsp;新人专享大礼包</p>
                         <i style="margin-left:5px;font-size:15px;" class="fa fa-apple"></i>
-                        <i style="margin-left:10px;font-size:15px;color: rgb(83, 214, 100);" class="fa fa-android"></i>
+                        <i class="fa fa-android igreen"></i>
                          </div>  
                 </div>
                 <hr style="margin:0px 5px 10px 5px;width: 90%;">
@@ -537,7 +185,7 @@ body {font-family: Verdana,sans-serif;}
                     <div class="dsj2">
                         <p class="psj1">&nbsp;京东健康客户端</p>
                         <i style="margin-left:5px;font-size:15px;" class="fa fa-apple"></i>
-                        <i style="margin-left:10px;font-size:15px;color: rgb(83, 214, 100);" class="fa fa-android"></i>
+                        <i class="fa fa-android igreen"></i>
                          </div>
                     </div>
 
@@ -550,7 +198,7 @@ body {font-family: Verdana,sans-serif;}
                     <div class="qydropdown4-content">
 
                         <div style="float: left;width:310px">
-                            <div style="float: right;"><img class="fgx4" src="file://C:\Users\Public\QD1006\竖分割线2.png"> </div>
+                            <div style="float: right;"><img class="fgx4" src="竖分割线2.png"> </div>
                             <div><p class="bt">特色主题</p></div>
                                 <div id="a1" class="duolie4">
                                     <a  href="">新品首发</a>
@@ -576,7 +224,7 @@ body {font-family: Verdana,sans-serif;}
                         </div>
 
                         <div style="float: left;width:279px">
-                            <div style="float: right;"><img class="fgx4" src="file://C:\Users\Public\QD1006\竖分割线2.png"> </div>
+                            <div style="float: right;"><img class="fgx4" src="竖分割线2.png"> </div>
                             <div><p class="bt" style="padding-left: 11px;">行业频道</p></div>
                                 <div id="a1" class="duolie3" style="padding-left: 11px;">
                                     <a  href="">手机</a>
@@ -598,7 +246,7 @@ body {font-family: Verdana,sans-serif;}
                         </div>
 
                         <div style="float: left;width:294px">
-                            <div style="float: right;"><img class="fgx4" src="file://C:\Users\Public\QD1006\竖分割线2.png"> </div>
+                            <div style="float: right;"><img class="fgx4" src="竖分割线2.png"> </div>
                             <div ><p class="bt" style="padding-left: 11px;">生活服务</p></div>
                                 <div id="a1" class="duolie3" style="padding-left: 11px;">
                                     <a href="">京东众筹</a>
@@ -652,9 +300,7 @@ body {font-family: Verdana,sans-serif;}
                             <a  href="">客服邮箱</a>
                             <a  href="">全球售客服</a>
                         </div>
-                        <div>
-                            <img class="fgx3" src="file://C:\Users\Public\QD1006\横分割线.png"> 
-                        </div>
+                    <hr>
                         <div style="padding-top:  5px;"><p class="bt">商户</p></div>
                         <div id="a1" class="duolie2">
                             <a href="">合作招商</a>
@@ -735,10 +381,6 @@ body {font-family: Verdana,sans-serif;}
                                             </div>
 
                                             <div class="dgwc">
-                                             <!-- <div style="float:left;">
-                                                <img style="z-index:2;width:15%" src="file://C:\Users\Public\QD1006\shopping.png"> 
-                                                <p style="z-index:2;color: rgb(108, 0, 250);">0</p></div>
---->  
                                                 <div style="float:left;margin: auto; padding: 5px 0 0 4px;
                                                 width: 75%;">
                                                 <i style="color:#E1251B" class="fa fa-shopping-cart"></i>
@@ -850,8 +492,8 @@ body {font-family: Verdana,sans-serif;}
 </div>
 </div>
 
-    <div id="top" class="row clearfix">
-            <div style="margin:10px 90px 0 90px;" class="col-md-12 column">
+    <div id="top" class="topw row clearfix">
+            <div  class="top col-md-12 column">
 
             <div style="float:left;background-color: #ffffff;width: 190px;height: 470px;">
 
@@ -3724,7 +3366,7 @@ body {font-family: Verdana,sans-serif;}
                </div></div>
 
             <div style="margin-left:9px;float:left;background-color: #ffffff;width: 190px;height: 470px;">
-          <img  id="imgtx" src="file://C:\Users\Public\QD1006\touxiang.png"> 
+          <img  id="imgtx" src="data:image/png;base64,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"> 
 
           <div style="width: 190px;height:102px;"> 
             <div style="float:left;margin:16px 0 0 10px;">
@@ -3736,24 +3378,23 @@ body {font-family: Verdana,sans-serif;}
             <div id="corner1">
                 <a class="dl1" style="margin:10px 0 0 10px;">新人福利</a></div>
             <div id="corner2">
-                <a class="dl2" style="margin:10px 0 0px 7px;">PLUS会员</a></div>
-                <hr style="width:100px;margin-top: 20px;">
+                <a class="dl2" style="margin:10px 0 0 7px;">PLUS会员</a></div>           
             </div>
-               
-               
+
+            <hr style="width:140px;margin:0 0 8px 25px;">
                 <div style="width: 190px;height:110px;">
                     <div style="width: 190px;height:30px;">
-                        <h5 style="width: 56px;height:20px;margin:16px 0 0 13px;font-weight: bolder;float:left;">京东快报</h5>
-                        <a style="width: 39.56px;height:21px;float:right;margin:17px 10px 0 10px;" class="a1aa">更多   <i style="font-size: 1px;" class="fa fa-chevron-right"></i></a>
+                        <h5 style="width: 56px;height:20px;margin:0px 0 0 13px;font-weight: bolder;float:left;">京东快报</h5>
+                        <a style="width: 39.56px;height:21px;float:right;margin:0px 10px 0 10px;" class="a1aa">更多   <i style="font-size: 1px;" class="fa fa-chevron-right"></i></a>
                     </div>
                   
-                    <ul style="width: 190px;padding:2px 0 0 20px;margin-top:10px;">
+                    <ul style="width: 190px;padding:2px 0 0 20px;margin-top:0px;">
                     <p class="span3" style="margin:0;padding-left: 0;"><span id="w" class="span3">热议</span><a id="w1" target=_blank class="a1a" href="www.baidu.com">&nbsp;&nbsp;女孩子都爱喝的酒，你的女朋友还</a></p>
                     <p class="span3" style="margin:4px 0 0 0;"><span id="w2" class="span3">推荐</span><a id="w3" target=_blank class="a1a" href="">&nbsp;&nbsp;票友圈优雅不叫真优雅，想要表</a></p>
                     <p class="span3" style="margin:4px 0 0 0;"><span id="w4" class="span3">热门</span><a id="w5" target=_blank class="a1a" href="">&nbsp;&nbsp;冲奶粉不做这个动作，奶粉最贵都</a></p>
                     <p class="span3" style="margin:4px 0 0 0;"><span id="w6" class="span3">HOT</span><a id="w7" target=_blank class="a1a" href="">&nbsp;&nbsp;传承百年的高端家电，看德国的美</a></p>
                     </ul> 
-                    <hr style="width:100px;margin-top: 10px;">
+                    <hr style="width:150px;margin-top: 5px;">
                 </div>
                         <div class="tf" >
                             <a id="1hf" class="a12">
@@ -3807,710 +3448,64 @@ body {font-family: Verdana,sans-serif;}
                             </a>
                         </div>
 
-                        <div id="1t12" class="tf" style="padding:30px 10px 20px 10px;display: none;">
-                   <div style="height:10px;margin-bottom: 15px;">
-                    <a id="pb" style="margin-left: 10px;" class="a4">话费</a></p> 
-                    <a id="pb2" style="margin-left: 38px;"  class="a4">机票</a></p>
-                    <a id="pb3" style="float:right;margin-right: 10px;" class="a4">酒店</a></p></div>
-                    <div id="pba">
-                     <div style="height:10px;"> 
-                        <a id="pbb1" class="a4" style="margin-left: 10px;">话费充值</a>
-                        <a id="pbc1" class="a4">流量充值</a><a id="pbd1" class="a4">套餐变更</a></div>
-                        </div>
+                        <div id="1t12" style="padding:20px 10px 20px 10px;display: none;" class="tf">
 
-                        <div id="pbb" style="padding:0px 4px 20px 8px;">
-                            <span class="span4">号码</span><input placeholder="移动/联通/电信" class="ipt" type="text"></input>
-                             <span class="span4">面值</span> 
-                             <form > 
-                                <select id="" name="select">
-                                <option value="10">10元</option>
-                                <option value="20">20元</option>
-                                <option value="30">30元</option>
-                                <option value="50">50元</option>
-                                <option value="100" selected>100元</option>
-                                <option value="200">200元</option>
-                                <option value="300">300元</option>
-                                <option value="500">500元</option>
-                                </select>
-                              </form>
-                             <p class="p1_red">￥98.0-￥100.0</p>
-                             <a class="a5_redbutton">快速充值</a>
-                             <p><a class="a6_blue">抢90减40元话费券</a></p>
-                        </div>
+                            <div style="height:10px;margin-bottom: 15px;">
+                                <a id="pb" style="margin-left: 10px;color: red;border-bottom: solid red;" class="a4">话费</a>
+                                <a id="pb2" style="margin-left: 38px;"  class="a4">机票</a>
+                                <a id="pb3" style="float:right;margin-right: 10px;" class="a4">酒店</a>
+                            </div>
 
-                        <div id="pbc" class="gs">
-                            <span class="span4">号码</span><input placeholder="移动/联通/电信" class="ipt" type="text"></input>
-                             <span class="span4">流量</span> 
-                          
-                             <p class="p1_red">￥7.5-￥10.0</p>
-                             <a class="a5_redbutton">快速充值</a>
-                             <a class="a6_blue">APP Store充值卡</a>
-                        </div>
+                            <div id="pba" style="float:left;">
+                                    <a id="pbb1" class="a4">话费充值</a>
+                                    <a id="pbc1" class="a4">流量充值</a>
+                                    <a id="pbd1" class="a4">套餐变更</a>
+                            </div>
 
-                        <div id="pbd" class="gs">
-                            <span class="span4">号码</span><input placeholder="支持部分地区移动" class="ipt" type="text"></input>
-                             <span class="span4">月费</span> <input class="ipt" type="text"></input>
-                             <p class="p1_red">500分钟1G流量</p>
-                             <a class="a5_redbutton">办理变更</a>
-                            <p><a class="a5_bluebutton">HOT</a> <a class="a6_blue">中国联通199全国不限量</a></p> 
-                        </div>
-                       <!--  <hr width="50%" size="30">      -->
-                    </div>
-                    
+                            <div id="pbb" style="padding:0px 4px 20px 8px;">
+                                <span class="span4">号码</span><input placeholder="移动/联通/电信" class="ipt" type="text"></input>
+                                <span class="span4" style="margin-right:0px;">面值</span> 
+                                <form> 
+                                    <select id="" name="select">
+                                    <option value="10">10元</option>
+                                    <option value="20">20元</option>
+                                    <option value="30">30元</option>
+                                    <option value="50">50元</option>
+                                    <option style="font-size: 12px;" value="100" selected>100元</option>
+                                    <option value="200">200元</option>
+                                    <option value="300">300元</option>
+                                    <option value="500">500元</option>
+                                    </select>
+                                </form>
+                                <p class="p1_red">￥98.0-￥100.0</p>
+                                <a class="a5_redbutton">快速充值</a>
+                                <p><a class="a6_blue">抢90减40元话费券</a></p>
+                            </div>
+
+                            <div id="pbc" class="gs">
+                                <span class="span4">号码</span><input placeholder="移动/联通/电信" class="ipt" type="text"></input>
+                                <span class="span4">流量</span> 
+                            
+                                <p class="p1_red">￥7.5-￥10.0</p>
+                                <a class="a5_redbutton">快速充值</a>
+                                <a class="a6_blue">APP Store充值卡</a>
+                            </div>
+
+                            <div id="pbd" class="gs">
+                                <span class="span4">号码</span><input placeholder="支持部分地区移动" class="ipt" type="text"></input>
+                                <span class="span4">月费</span> <input class="ipt" type="text"></input>
+                                <p class="p1_red">500分钟1G流量</p>
+                                <a class="a5_redbutton">办理变更</a>
+                                <p><a class="a5_bluebutton">HOT</a> <a class="a6_blue">中国联通199全国不限量</a></p> 
+                            </div>
+                        </div>            
             </div>
     </div>
     
-    <div  id="top1" class="row clearfix">
-        <div style="margin:30px 90px 0 105px;width: 1187px;height:260px;background-color: #E1251B;" class="col-md-12 column">
-        </div>
-    </div>
-
-    <div class="row clearfix">
-        <div style="margin:10px 90px 0 90px;" class="col-md-12 column">
-            <div style="margin-right:9px;float:left;width: 589px;height:260px;background-color: #fdff80;"></div>
-            <div style="float:left;width: 589px;height:260px;background-color: #171800;"></div>
-        </div>
-    </div>
-
-    <div class="row clearfix">
-        <div style="margin:30px 90px 0 105px;width: 1187px;height:260px;background-color: #E1251B;" class="col-md-12 column">
-        </div>
-    </div>
-
-    <div class="row clearfix">
-        <div style="margin:10px 90px 0 90px;" class="col-md-12 column">
-            <div style="margin-right:9px;float:left;width: 290px;height:340px;background-color: #fdff80;"></div>
-            <div style="margin-right:9px;float:left;width: 290px;height:340px;background-color: #007272;"></div>
-            <div style="margin-right:9px;float:left;width: 290px;height:340px;background-color: #ac80ff;"></div>
-            <div style="float:left;width: 290px;height:340px;background-color: #171800;"></div>
-        </div>
-    </div>
-
-    <div class="row clearfix">
-        <div style="margin:10px 90px 0 90px;" class="col-md-12 column">
-            <div style="padding:50ox 0;text-align: center; width: 1187px;height:45px;background-color: #E1251B;" class="col-md-12 column">
-            <h3>频道广场</h3>
-            </div>
-        </div>
-    </div>
-
-    <div style="margin:10px 90px 0 74px;" class="col-md-12 column">
-        <div style="margin-right:9px;float:left;width: 290px;height:340px;background-color: #fdff80;"></div>
-        <div style="margin-right:9px;float:left;width: 290px;height:340px;background-color: #007272;"></div>
-        <div style="margin-right:9px;float:left;width: 290px;height:340px;background-color: #ac80ff;"></div>
-        <div style="float:left;width: 290px;height:340px;background-color: #171800;"></div>
-    </div>
    
-</div>
 
-
- 
-<script>
-     $(document).ready(function(){
-  $("#q1").hover(function(){$("#q11").css("color","#E1251B");});
-  $("#q2").hover(function(){$("#q21").css("color","#E1251B");});
-  $("#q3").hover(function(){$("#q31").css("color","#E1251B");});
-  $("#q4").hover(function(){$("#q41").css("color","#E1251B");});
-  $("#q5").hover(function(){$("#q51").css("color","#E1251B");});
-  $("#q6").hover(function(){$("#q61").css("color","#E1251B");});
-  $("#q7").hover(function(){$("#q71").css("color","#E1251B");});
-  $("#q8").hover(function(){$("#q81").css("color","#E1251B");});
-  $("#q9").hover(function(){$("#q91").css("color","#E1251B");});
-  $("#q1").mouseleave(function(){$("#q11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#q2").mouseleave(function(){$("#q21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#q3").mouseleave(function(){$("#q31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#q4").mouseleave(function(){$("#q41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#q5").mouseleave(function(){$("#q51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#q6").mouseleave(function(){$("#q61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#q7").mouseleave(function(){$("#q71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#q8").mouseleave(function(){$("#q81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#q9").mouseleave(function(){$("#q91").css("color","rgba(0, 0, 0, 0.795)");});
-  
-  $("#w1").hover(function(){$("#w11").css("color","#E1251B");});
-  $("#w2").hover(function(){$("#w21").css("color","#E1251B");});
-  $("#w3p").hover(function(){$("#w31p").css("color","#E1251B");});
-  $("#w4").hover(function(){$("#w41").css("color","#E1251B");});
-  $("#w5p").hover(function(){$("#w51p").css("color","#E1251B");});
-  $("#w6").hover(function(){$("#w61").css("color","#E1251B");});
-  $("#w7p").hover(function(){$("#w71p").css("color","#E1251B");});
-  $("#w1").mouseleave(function(){$("#w11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#w2").mouseleave(function(){$("#w21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#w3p").mouseleave(function(){$("#w31p").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#w4").mouseleave(function(){$("#w41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#w5p").mouseleave(function(){$("#w51p").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#w6").mouseleave(function(){$("#w61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#w7p").mouseleave(function(){$("#w71p").css("color","rgba(0, 0, 0, 0.795)");});
-  
-  $("#e1").hover(function(){$("#e11").css("color","#E1251B");});
-  $("#e2").hover(function(){$("#e21").css("color","#E1251B");});
-  $("#e3").hover(function(){$("#e31").css("color","#E1251B");});
-  $("#e4").hover(function(){$("#e41").css("color","#E1251B");});
-  $("#e5").hover(function(){$("#e51").css("color","#E1251B");});
-  $("#e6").hover(function(){$("#e61").css("color","#E1251B");});
-  $("#e7").hover(function(){$("#e71").css("color","#E1251B");});
-  $("#e8").hover(function(){$("#e81").css("color","#E1251B");});
-  $("#e9").hover(function(){$("#e91").css("color","#E1251B");});
-  $("#e1").mouseleave(function(){$("#e11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#e2").mouseleave(function(){$("#e21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#e3").mouseleave(function(){$("#e31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#e4").mouseleave(function(){$("#e41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#e5").mouseleave(function(){$("#e51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#e6").mouseleave(function(){$("#e61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#e7").mouseleave(function(){$("#e71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#e8").mouseleave(function(){$("#e81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#e9").mouseleave(function(){$("#e91").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#k1").hover(function(){$("#k11").css("color","#k1251B");});
-  $("#k2").hover(function(){$("#k21").css("color","#k1251B");});
-  $("#k3").hover(function(){$("#k31").css("color","#k1251B");});
-  $("#k4").hover(function(){$("#k41").css("color","#k1251B");});
-  $("#k5").hover(function(){$("#k51").css("color","#k1251B");});
-  $("#k6").hover(function(){$("#k61").css("color","#k1251B");});
-  $("#k7").hover(function(){$("#k71").css("color","#k1251B");});
-  $("#k8").hover(function(){$("#k81").css("color","#k1251B");});
-  $("#k9").hover(function(){$("#k91").css("color","#k1251B");});
-  $("#k1").mouseleave(function(){$("#k11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#k2").mouseleave(function(){$("#k21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#k3").mouseleave(function(){$("#k31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#k4").mouseleave(function(){$("#k41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#k5").mouseleave(function(){$("#k51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#k6").mouseleave(function(){$("#k61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#k7").mouseleave(function(){$("#k71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#k8").mouseleave(function(){$("#k81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#k9").mouseleave(function(){$("#k91").css("color","rgba(0, 0, 0, 0.795)");});
- 
-
-  $("#t1").hover(function(){$("#t11").css("color","#E1251B");});
-  $("#t2").hover(function(){$("#t21").css("color","#E1251B");});
-  $("#t3").hover(function(){$("#t31").css("color","#E1251B");});
-  $("#t4").hover(function(){$("#t41").css("color","#E1251B");});
-  $("#t5").hover(function(){$("#t51").css("color","#E1251B");});
-  $("#t6").hover(function(){$("#t61").css("color","#E1251B");});
-  $("#t1").mouseleave(function(){$("#t11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#t2").mouseleave(function(){$("#t21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#t3").mouseleave(function(){$("#t31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#t4").mouseleave(function(){$("#t41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#t5").mouseleave(function(){$("#t51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#t6").mouseleave(function(){$("#t61").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#y1").hover(function(){$("#y11").css("color","#E1251B");});
-  $("#y2").hover(function(){$("#y21").css("color","#E1251B");});
-  $("#y3").hover(function(){$("#y31").css("color","#E1251B");});
-  $("#y4").hover(function(){$("#y41").css("color","#E1251B");});
-  $("#y5").hover(function(){$("#y51").css("color","#E1251B");});
-  $("#y6").hover(function(){$("#y61").css("color","#E1251B");});
-  $("#y7").hover(function(){$("#y71").css("color","#E1251B");});
-  $("#y8").hover(function(){$("#y81").css("color","#E1251B");});
-  $("#y9").hover(function(){$("#y91").css("color","#E1251B");});
-  $("#y10").hover(function(){$("#y101").css("color","#E1251B");});
-  $("#y1").mouseleave(function(){$("#y11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#y2").mouseleave(function(){$("#y21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#y3").mouseleave(function(){$("#y31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#y4").mouseleave(function(){$("#y41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#y5").mouseleave(function(){$("#y51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#y6").mouseleave(function(){$("#y61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#y7").mouseleave(function(){$("#y71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#y8").mouseleave(function(){$("#y81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#y9").mouseleave(function(){$("#y91").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#y10").mouseleave(function(){$("#y101").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#u1").hover(function(){$("#u11").css("color","#E1251B");});
-  $("#u2").hover(function(){$("#u21").css("color","#E1251B");});
-  $("#u3").hover(function(){$("#u31").css("color","#E1251B");});
-  $("#u4").hover(function(){$("#u41").css("color","#E1251B");});
-  $("#u5").hover(function(){$("#u51").css("color","#E1251B");});
-  $("#u6").hover(function(){$("#u61").css("color","#E1251B");});
-  $("#u7").hover(function(){$("#u71").css("color","#E1251B");});
-  $("#u8").hover(function(){$("#u81").css("color","#E1251B");});
-  $("#u9").hover(function(){$("#u91").css("color","#E1251B");});
-  $("#u1").mouseleave(function(){$("#u11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#u2").mouseleave(function(){$("#u21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#u3").mouseleave(function(){$("#u31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#u4").mouseleave(function(){$("#u41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#u5").mouseleave(function(){$("#u51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#u6").mouseleave(function(){$("#u61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#u7").mouseleave(function(){$("#u71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#u8").mouseleave(function(){$("#u81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#u9").mouseleave(function(){$("#u91").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#i1").hover(function(){$("#i11").css("color","#E1251B");});
-  $("#i2").hover(function(){$("#i21").css("color","#E1251B");});
-  $("#i3").hover(function(){$("#i31").css("color","#E1251B");});
-  $("#i4").hover(function(){$("#i41").css("color","#E1251B");});
-  $("#i5").hover(function(){$("#i51").css("color","#E1251B");});
-  $("#i6").hover(function(){$("#i61").css("color","#E1251B");});
-  $("#i7").hover(function(){$("#i71").css("color","#E1251B");});
-  $("#i8").hover(function(){$("#i81").css("color","#E1251B");});
-  $("#i9").hover(function(){$("#i91").css("color","#E1251B");});
-  $("#i1").mouseleave(function(){$("#i11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#i2").mouseleave(function(){$("#i21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#i3").mouseleave(function(){$("#i31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#i4").mouseleave(function(){$("#i41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#i5").mouseleave(function(){$("#i51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#i6").mouseleave(function(){$("#i61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#i7").mouseleave(function(){$("#i71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#i8").mouseleave(function(){$("#i81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#i9").mouseleave(function(){$("#i91").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#o1").hover(function(){$("#o11").css("color","#E1251B");});
-  $("#o2").hover(function(){$("#o21").css("color","#E1251B");});
-  $("#o3").hover(function(){$("#o31").css("color","#E1251B");});
-  $("#o4").hover(function(){$("#o41").css("color","#E1251B");});
-  $("#o5").hover(function(){$("#o51").css("color","#E1251B");});
-  $("#o6").hover(function(){$("#o61").css("color","#E1251B");});
-  $("#o7").hover(function(){$("#o71").css("color","#E1251B");});
-  $("#o8").hover(function(){$("#o81").css("color","#E1251B");});
-  $("#o9").hover(function(){$("#o91").css("color","#E1251B");});
-  $("#o10").hover(function(){$("#o101").css("color","#E1251B");});
-  $("#o1").mouseleave(function(){$("#o11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o2").mouseleave(function(){$("#o21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o3").mouseleave(function(){$("#o31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o4").mouseleave(function(){$("#o41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o5").mouseleave(function(){$("#o51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o6").mouseleave(function(){$("#o61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o7").mouseleave(function(){$("#o71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o8").mouseleave(function(){$("#o81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o9").mouseleave(function(){$("#o91").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o10").mouseleave(function(){$("#o101").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#o1").hover(function(){$("#o11").css("color","#E1251B");});
-  $("#o2").hover(function(){$("#o21").css("color","#E1251B");});
-  $("#o3").hover(function(){$("#o31").css("color","#E1251B");});
-  $("#o4").hover(function(){$("#o41").css("color","#E1251B");});
-  $("#o5").hover(function(){$("#o51").css("color","#E1251B");});
-  $("#o6").hover(function(){$("#o61").css("color","#E1251B");});
-  $("#o7").hover(function(){$("#o71").css("color","#E1251B");});
-  $("#o8").hover(function(){$("#o81").css("color","#E1251B");});
-  $("#o9").hover(function(){$("#o91").css("color","#E1251B");});
-  $("#o10").hover(function(){$("#o101").css("color","#E1251B");});
-  $("#o1").mouseleave(function(){$("#o11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o2").mouseleave(function(){$("#o21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o3").mouseleave(function(){$("#o31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o4").mouseleave(function(){$("#o41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o5").mouseleave(function(){$("#o51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o6").mouseleave(function(){$("#o61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o7").mouseleave(function(){$("#o71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o8").mouseleave(function(){$("#o81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o9").mouseleave(function(){$("#o91").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#o10").mouseleave(function(){$("#o101").css("color","rgba(0, 0, 0, 0.795)");});
-
-
-  $("#p1").hover(function(){$("#p11").css("color","#E1251B");});
-  $("#p2").hover(function(){$("#p21").css("color","#E1251B");});
-  $("#p3").hover(function(){$("#p31").css("color","#E1251B");});
-  $("#p4").hover(function(){$("#p41").css("color","#E1251B");});
-  $("#p5").hover(function(){$("#p51").css("color","#E1251B");});
-  $("#p6").hover(function(){$("#p61").css("color","#E1251B");});
-  $("#p7").hover(function(){$("#p71").css("color","#E1251B");});
-  $("#p8").hover(function(){$("#p81").css("color","#E1251B");});
-  $("#p9").hover(function(){$("#p91").css("color","#E1251B");});
-  $("#p10").hover(function(){$("#p101").css("color","#E1251B");});
-  $("#p1").mouseleave(function(){$("#p11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#p2").mouseleave(function(){$("#p21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#p3").mouseleave(function(){$("#p31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#p4").mouseleave(function(){$("#p41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#p5").mouseleave(function(){$("#p51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#p6").mouseleave(function(){$("#p61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#p7").mouseleave(function(){$("#p71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#p8").mouseleave(function(){$("#p81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#p9").mouseleave(function(){$("#p91").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#p10").mouseleave(function(){$("#p101").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#j1").hover(function(){$("#j11").css("color","#E1251B");});
-  $("#j2").hover(function(){$("#j21").css("color","#E1251B");});
-  $("#j3").hover(function(){$("#j31").css("color","#E1251B");});
-  $("#j4").hover(function(){$("#j41").css("color","#E1251B");});
-  $("#j5").hover(function(){$("#j51").css("color","#E1251B");});
-  $("#j6").hover(function(){$("#j61").css("color","#E1251B");});
-  $("#j7").hover(function(){$("#j71").css("color","#E1251B");});
-  $("#j8").hover(function(){$("#j81").css("color","#E1251B");});
-  $("#j9").hover(function(){$("#j91").css("color","#E1251B");});
-  $("#j10").hover(function(){$("#j101").css("color","#E1251B");});
-  $("#j1").mouseleave(function(){$("#j11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#j2").mouseleave(function(){$("#j21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#j3").mouseleave(function(){$("#j31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#j4").mouseleave(function(){$("#j41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#j5").mouseleave(function(){$("#j51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#j6").mouseleave(function(){$("#j61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#j7").mouseleave(function(){$("#j71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#j8").mouseleave(function(){$("#j81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#j9").mouseleave(function(){$("#j91").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#j10").mouseleave(function(){$("#j101").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#h1").hover(function(){$("#h11").css("color","#E1251B");});
-  $("#h2").hover(function(){$("#h21").css("color","#E1251B");});
-  $("#h3").hover(function(){$("#h31").css("color","#E1251B");});
-  $("#h4").hover(function(){$("#h41").css("color","#E1251B");});
-  $("#h5").hover(function(){$("#h51").css("color","#E1251B");});
-  $("#h6").hover(function(){$("#h61").css("color","#E1251B");});
-  $("#h7").hover(function(){$("#h71").css("color","#E1251B");});
-  $("#h8").hover(function(){$("#h81").css("color","#E1251B");});
-  $("#h9").hover(function(){$("#h91").css("color","#E1251B");});
-  $("#h10").hover(function(){$("#h101").css("color","#E1251B");});
-  $("#h11a").hover(function(){$("#h111a").css("color","#E1251B");});
-  $("#h12").hover(function(){$("#h121").css("color","#E1251B");});
-  $("#h1").mouseleave(function(){$("#h11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h2").mouseleave(function(){$("#h21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h3").mouseleave(function(){$("#h31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h4").mouseleave(function(){$("#h41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h5").mouseleave(function(){$("#h51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h6").mouseleave(function(){$("#h61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h7").mouseleave(function(){$("#h71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h8").mouseleave(function(){$("#h81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h9").mouseleave(function(){$("#h91").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h10").mouseleave(function(){$("#h101").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h11a").mouseleave(function(){$("#h111a").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#h12").mouseleave(function(){$("#h121").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#c1").hover(function(){$("#c11").css("color","#E1251B");});
-  $("#c2").hover(function(){$("#c21").css("color","#E1251B");});
-  $("#c3").hover(function(){$("#c31").css("color","#E1251B");});
-  $("#c4").hover(function(){$("#c41").css("color","#E1251B");});
-  $("#c5").hover(function(){$("#c51").css("color","#E1251B");});
-  $("#c6").hover(function(){$("#c61").css("color","#E1251B");});
-  $("#c7").hover(function(){$("#c71").css("color","#E1251B");});
-  $("#c8").hover(function(){$("#c81").css("color","#E1251B");});
-  $("#c1").mouseleave(function(){$("#c11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#c2").mouseleave(function(){$("#c21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#c3").mouseleave(function(){$("#c31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#c4").mouseleave(function(){$("#c41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#c5").mouseleave(function(){$("#c51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#c6").mouseleave(function(){$("#c61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#c7").mouseleave(function(){$("#c71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#c8").mouseleave(function(){$("#c81").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#v1").hover(function(){$("#v11").css("color","#E1251B");});
-  $("#v2").hover(function(){$("#v21").css("color","#E1251B");});
-  $("#1v3").hover(function(){$("#1v31").css("color","#E1251B");});
-  $("#v4").hover(function(){$("#v41").css("color","#E1251B");});
-  $("#v5").hover(function(){$("#v51").css("color","#E1251B");});
-  $("#v6").hover(function(){$("#v61").css("color","#E1251B");});
-  $("#v7").hover(function(){$("#v71").css("color","#E1251B");});
-  $("#v8").hover(function(){$("#v81").css("color","#E1251B");});
-  $("#v1").mouseleave(function(){$("#v11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#v2").mouseleave(function(){$("#v21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#1v3").mouseleave(function(){$("#1v31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#v4").mouseleave(function(){$("#v41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#v5").mouseleave(function(){$("#v51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#v6").mouseleave(function(){$("#v61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#v7").mouseleave(function(){$("#v71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#v8").mouseleave(function(){$("#v81").css("color","rgba(0, 0, 0, 0.795)");});
-
-
-  $("#f1").hover(function(){$("#f11").css("color","#E1251B");});
-  $("#f2").hover(function(){$("#f21").css("color","#E1251B");});
-  $("#f3").hover(function(){$("#f31").css("color","#E1251B");});
-  $("#f4").hover(function(){$("#f41").css("color","#E1251B");});
-  $("#f5").hover(function(){$("#f51").css("color","#E1251B");});
-  $("#f6").hover(function(){$("#f61").css("color","#E1251B");});
-  $("#f7").hover(function(){$("#f71").css("color","#E1251B");});
-  $("#f8").hover(function(){$("#f81").css("color","#E1251B");});
-  $("#f9").hover(function(){$("#f91").css("color","#E1251B");});
-  $("#f10").hover(function(){$("#f101").css("color","#E1251B");});
-  $("a#f11").hover(function(){$("a#f111").css("color","#E1251B");});
-  $("#f12").hover(function(){$("#f121").css("color","#E1251B");});
-  $("#f13").hover(function(){$("#f131").css("color","#E1251B");});
-  $("#f1").mouseleave(function(){$("#f11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f2").mouseleave(function(){$("#f21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f3").mouseleave(function(){$("#f31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f4").mouseleave(function(){$("#f41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f5").mouseleave(function(){$("#f51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f6").mouseleave(function(){$("#f61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f7").mouseleave(function(){$("#f71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f8").mouseleave(function(){$("#f81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f9").mouseleave(function(){$("#f91").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f10").mouseleave(function(){$("#f101").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#af11").mouseleave(function(){$("#af111").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f12").mouseleave(function(){$("#f121").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#f13").mouseleave(function(){$("#f131").css("color","rgba(0, 0, 0, 0.795)");});
-  
-  $("#n1").hover(function(){$("#n11").css("color","#E1251B");});
-  $("#n2").hover(function(){$("#n21").css("color","#E1251B");});
-  $("#n3").hover(function(){$("#n31").css("color","#E1251B");});
-  $("#n4").hover(function(){$("#n41").css("color","#E1251B");});
-  $("#n5").hover(function(){$("#n51").css("color","#E1251B");});
-  $("#n6").hover(function(){$("#n61").css("color","#E1251B");});
-  $("#n7").hover(function(){$("#n71").css("color","#E1251B");});
-  $("#n8").hover(function(){$("#n81").css("color","#E1251B");});
-  $("#n9").hover(function(){$("#n91").css("color","#E1251B");});
-  $("#n10").hover(function(){$("#n101").css("color","#E1251B");});
-  $("#n1").mouseleave(function(){$("#n11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#n2").mouseleave(function(){$("#n21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#n3").mouseleave(function(){$("#n31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#n4").mouseleave(function(){$("#n41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#n5").mouseleave(function(){$("#n51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#n6").mouseleave(function(){$("#n61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#n7").mouseleave(function(){$("#n71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#n8").mouseleave(function(){$("#n81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#n9").mouseleave(function(){$("#n91").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#n10").mouseleave(function(){$("#n101").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#g1").hover(function(){$("#g11").css("color","#E1251B");});
-  $("#g2").hover(function(){$("#g21").css("color","#E1251B");});
-  $("#g3").hover(function(){$("#g31").css("color","#E1251B");});
-  $("#g4").hover(function(){$("#g41").css("color","#E1251B");});
-  $("#g5").hover(function(){$("#g51").css("color","#E1251B");});
-  $("#g6").hover(function(){$("#g61").css("color","#E1251B");});
-  $("#g7").hover(function(){$("#g71").css("color","#E1251B");});
-  $("#g10").hover(function(){$("#g101").css("color","#E1251B");});
-  $("#g1").mouseleave(function(){$("#g11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#g2").mouseleave(function(){$("#g21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#g3").mouseleave(function(){$("#g31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#g4").mouseleave(function(){$("#g41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#g5").mouseleave(function(){$("#g51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#g6").mouseleave(function(){$("#g61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#g7").mouseleave(function(){$("#g71").css("color","rgba(0, 0, 0, 0.795)");});
-
-  $("#z1").hover(function(){$("#z11").css("color","#E1251B");});
-  $("#z2").hover(function(){$("#z21").css("color","#E1251B");});
-  $("#z3").hover(function(){$("#z31").css("color","#E1251B");});
-  $("#z4").hover(function(){$("#z41").css("color","#E1251B");});
-  $("#z5").hover(function(){$("#z51").css("color","#E1251B");});
-  $("#z6").hover(function(){$("#z61").css("color","#E1251B");});
-  $("#z7").hover(function(){$("#z71").css("color","#E1251B");});
-  $("#z8").hover(function(){$("#z81").css("color","#E1251B");});
-  $("#z9").hover(function(){$("#z91").css("color","#E1251B");});
-  $("#z10").hover(function(){$("#z101").css("color","#E1251B");});
-  $("#z11").hover(function(){$("#z111").css("color","#E1251B");});
-  $("#z12").hover(function(){$("#z121").css("color","#E1251B");});
-  $("#z13").hover(function(){$("#z131").css("color","#E1251B");});
-  $("#z1").mouseleave(function(){$("#z11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z2").mouseleave(function(){$("#z21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z3").mouseleave(function(){$("#z31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z4").mouseleave(function(){$("#z41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z5").mouseleave(function(){$("#z51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z6").mouseleave(function(){$("#z61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z7").mouseleave(function(){$("#z71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z8").mouseleave(function(){$("#z81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z9").mouseleave(function(){$("#z91").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z10").mouseleave(function(){$("#z101").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z11").mouseleave(function(){$("#z111").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z12").mouseleave(function(){$("#z121").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#z13").mouseleave(function(){$("#z131").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m1").hover(function(){$("#m11").css("color","#E1251B");});
-  $("#m2").hover(function(){$("#m21").css("color","#E1251B");});
-  $("#m3").hover(function(){$("#m31").css("color","#E1251B");});
-  $("#m4").hover(function(){$("#m41").css("color","#E1251B");});
-  $("#m5").hover(function(){$("#m51").css("color","#E1251B");});
-  $("#m6").hover(function(){$("#m61").css("color","#E1251B");});
-  $("#m7").hover(function(){$("#m71").css("color","#E1251B");});
-  $("#m8").hover(function(){$("#m81").css("color","#E1251B");});
-  $("#m9").hover(function(){$("#m91").css("color","#E1251B");});
-  $("#m10").hover(function(){$("#m101").css("color","#E1251B");});
-  $("#m11").hover(function(){$("#m111").css("color","#E1251B");});
-  $("#m12").hover(function(){$("#m121").css("color","#E1251B");});
-  $("#m1").mouseleave(function(){$("#m11").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m2").mouseleave(function(){$("#m21").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m3").mouseleave(function(){$("#m31").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m4").mouseleave(function(){$("#m41").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m5").mouseleave(function(){$("#m51").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m6").mouseleave(function(){$("#m61").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m7").mouseleave(function(){$("#m71").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m8").mouseleave(function(){$("#m81").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m9").mouseleave(function(){$("#m91").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m10").mouseleave(function(){$("#m101").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m11").mouseleave(function(){$("#m111").css("color","rgba(0, 0, 0, 0.795)");});
-  $("#m12").mouseleave(function(){$("#m121").css("color","rgba(0, 0, 0, 0.795)");});
-
-
-    $("#w").hover(function(){
-      $("#w1").css("color","#E1251B");
-      },function(){
-      $("#w1").css("color","#666666");
-    }); $("#w2").hover(function(){
-      $("#w3").css("color","#E1251B");
-      },function(){
-      $("#w3").css("color","#666666");
-    }); $("#w4").hover(function(){
-      $("#w5").css("color","#E1251B");
-      },function(){
-      $("#w5").css("color","#666666");
-    }); $("#w6").hover(function(){
-      $("#w7").css("color","#E1251B");
-      },function(){
-      $("#w7").css("color","#666666");
-    });
-    $(".prev1").hide();
-    $(".next1").hide();
-    $("#im2").mouseenter(function(){
-      $(".prev1").show();    $(".next1").show();
-      });
-      $("#im2").mouseleave(function(){
-          $(".prev1").hide();
-    $(".next1").hide();
-      });
-      $("#1hf").mouseenter(function(){
-      $(".tf").hide();  $("#1t12").show();   
-      });
-      $(".iw").click(function(){
-    $(".dtop").hide();
-  });
-
-  $("#pb").hover(function(){$("#pba").show();$("#pbb").show();});
-  $("#pb2").hover(function(){$("#pba").hide();$("#pbb").hide();});
-  $("#pbc1").hover(function(){$("#pbc").show();$("#pbb").hide();$("#pbd").hide();});
-  $("#pbb1").hover(function(){$("#pbb").show();$("#pbc").hide();$("#pbd").hide();});
-  $("#pbd1").hover(function(){$("#pbd").show();$("#pbc").hide();$("#pbb").hide();});
-  });
-
-
-
-
-document.getElementById("jd").onwheel = function() {myFunction()};
-function myFunction() {
-   // document.getElementById("myDIV").style.fontSize = "35px";
-  // var i=$(document).scrollTop();var j=$("#top1").offset().top;var k=$("#top").offset().top;
-   //var a=(j-i);var b=i-k;
-  /* alert($(document).scrollTop());   
-    alert($("#top1").offset().top);
-    alert(a);*/
-   // if(b>=0){$(".ljydq-content").offset({top:-b,left:0});}
-    //$(".ljydq-content").offset({top:200,left:0});
-}
-top2();
-function top2(){
-    let i=$(document).scrollTop();let j=$("#top1").offset().top;let k=$("#top").offset().top;
-    if((i-k)<=0){$(".ljydq-content").css("top","0");};
-    if((i-k)>0){ $(".ljydq-content").css("top",i-k-10);};
-    setTimeout(top2, 500);
-    }
-
-function changebc(){
-    document.body.style.backgroundColor="red";
     
-}
-
-
-
-var slideIndex = 0;showSlides(slideIndex);
-
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-  clearTimeout(time1);
-  setTimeout(showSlides1, 4000); 
-}
- 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-  clearTimeout(time1);
-  setTimeout(showSlides1, 4000); 
-}
-showSlides1() ;
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-
-}function showSlides1() {
-let i;
-let slides = document.getElementsByClassName("mySlides");
-let dots = document.getElementsByClassName("dot");
-for (i = 0; i < slides.length; i++) {
-   slides[i].style.display = "none";  
-}
-slideIndex++;
-if (slideIndex > slides.length) {slideIndex = 1}    
-for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[slideIndex-1].style.display = "block";  
-dots[slideIndex-1].className += " active";
-time1=setTimeout(showSlides1, 4000);  
-}
-
-// 鼠标划过整个容器时停止自动播放
-wrap.onmouseover = function() {
-            clearTimeout(time1);
-        }
-        // 鼠标离开整个容器时继续播放至下一张
-        wrap.onmouseout = function() {
-            time1=setTimeout(showSlides1, 4000);
-        }
-      
-var slideIndexw = 0;showSlidesw(slideIndexw); showSlidesw1();
-function plusSlidesw(n) {
-showSlidesw(slideIndexw += n);
-showSlidesw2(slideIndexw2 += n);
-showSlidesw3(slideIndexw3 += n);
-}
-function showSlidesw(n) {
-let i;
-let slidesw = document.getElementsByClassName("mySlides1");
-if (n > slidesw.length) {slideIndexw = 1} 
-if (n < 1) {slideIndexw = slidesw.length}
-for (i = 0; i < slidesw.length; i++) {
-  slidesw[i].style.display = "none"; 
-}
-slidesw[slideIndexw-1].style.display = "block"; 
-}
-function showSlidesw1() {
-let i;
-let slidesw = document.getElementsByClassName("mySlides1");
-for (i = 0; i < slidesw.length; i++) {
-  slidesw[i].style.display = "none"; 
-}
-slideIndexw++;
-if (slideIndexw > slidesw.length) {slideIndexw = 1}    
-slidesw[slideIndexw-1].style.display = "block"; 
-time1=setTimeout(showSlidesw1, 6000);  
-}
-
-var slideIndexw2 = 0;showSlidesw2(slideIndexw2);showSlidesw21();
-function showSlidesw2(n) {
-let i;
-let slidesw2 = document.getElementsByClassName("mySlides2");
-if (n > slidesw2.length) {slideIndexw2 = 1} 
-if (n < 1) {slideIndexw2 = slidesw2.length}
-for (i = 0; i < slidesw2.length; i++) {
-  slidesw2[i].style.display = "none"; 
-}
-slidesw2[slideIndexw2-1].style.display = "block"; 
-}  
-function showSlidesw21() {
-let i;
-let slidesw2 = document.getElementsByClassName("mySlides2");
-for (i = 0; i < slidesw2.length; i++) {
-  slidesw2[i].style.display = "none"; 
-}
-slideIndexw2++;
-if (slideIndexw2 > slidesw2.length) {slideIndexw2 = 1}    
-slidesw2[slideIndexw2-1].style.display = "block"; 
-time1=setTimeout(showSlidesw21, 6000);  
-}
-
-var slideIndexw3 = 0;showSlidesw3(slideIndexw3);showSlidesw31();
-function showSlidesw3(n) {
-let i;
-let slidesw3 = document.getElementsByClassName("mySlides3");
-if (n > slidesw3.length) {slideIndexw3 = 1} 
-if (n < 1) {slideIndexw3 = slidesw3.length}
-for (i = 0; i < slidesw3.length; i++) {
-  slidesw3[i].style.display = "none"; 
-}
-slidesw3[slideIndexw3-1].style.display = "block"; 
-}
-function showSlidesw31() {
-let i;
-let slidesw3 = document.getElementsByClassName("mySlides3");
-for (i = 0; i < slidesw3.length; i++) {
-  slidesw3[i].style.display = "none"; 
-}
-slideIndexw3++;
-if (slideIndexw3 > slidesw3.length) {slideIndexw3 = 1}    
-slidesw3[slideIndexw3-1].style.display = "block"; 
-time1=setTimeout(showSlidesw31, 6000);  
-}
-        </script>
+</div>
+<script src="jd.js"></script>
+<script src="jquery_d.js"></script>
 </body>
