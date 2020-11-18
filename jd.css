@@ -922,16 +922,18 @@ div.price{
   text-align: center;
   text-decoration: none;
 }
+.price-miaosha:hover{
+  
+  text-decoration: none;
+}
 
 .price-origin{
   margin-left: 3px;
   cursor: pointer;
   font-size: 12px;
   color: rgb(139, 139, 139);
-  text-decoration-line: line-through;
-  text-decoration-style:solid;
-  text-decoration: none;
 }
+
 .miaosha_img{
   margin:0 20px 5px 20px;
   width: 140px;
@@ -939,7 +941,7 @@ div.price{
 
 }
 
-.price-origin :hover{
+.price-origin:hover{
   text-decoration: none;
 }
 
@@ -949,7 +951,13 @@ div.price{
   width: 200px;
   height: 260px;
 }
-
+.miaosha_a:hover{
+  padding:30px 20px 0 20px;
+  float:left;
+  width: 200px;
+  height: 260px;
+  text-decoration:none;
+}
 .copyright_p{
   font-size:12px;
   color:#666666;

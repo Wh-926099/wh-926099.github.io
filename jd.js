@@ -13,7 +13,10 @@ function top2(){
     if(k2>600){$(".search_hide1").css("display","block");$(".search_hide1").css("position","sticky");}
     setTimeout(top2, 500);
 }
-
+function to_top(){
+  let k3=$("document").scrollTop();
+  document.documentElement.scrollTop=k3;
+}
 function right_content_open(){
 $(".right_xd_content").css("width","230px");
 $(".right_xd").css("margin-right","230px"); 

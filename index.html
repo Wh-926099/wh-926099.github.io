@@ -14,7 +14,7 @@
 <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
-<body  onload="startTime()"> <div style="width:1349px">
+<body  onload="startTime()"> <div id="whf" style="width:1349px">
     <div class="right_xd_content">
         <a class="right_xd" onclick="right_content_close();right_content_open()"></a>
     </div>
@@ -53,7 +53,7 @@
         
         <svg id="svg_red3" style="margin-left:6px;" t="1605691681182" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2129" width="20" height="20"><path d="M512 262.4a47.104 47.104 0 0 0-34.048 14.592 51.2 51.2 0 0 0 0 70.656l387.072 401.92a46.848 46.848 0 0 0 68.096 0 51.2 51.2 0 0 0 0-70.656l-387.072-401.92A47.104 47.104 0 0 0 512 262.4z" fill="#2c2c2c" p-id="2130"></path><path d="M512 262.4a47.104 47.104 0 0 0-34.048 14.592L90.88 678.912a51.2 51.2 0 0 0 0 70.656 46.848 46.848 0 0 0 68.096 0l387.072-401.92a51.2 51.2 0 0 0 0-70.656A47.104 47.104 0 0 0 512 262.4z" fill="#2c2c2c" p-id="2131"></path></svg>
         <svg id="svg_red33" style="margin-bottom:5px;margin-left:6px;display:none;" t="1605691681182" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2129" width="20" height="20"><path d="M512 262.4a47.104 47.104 0 0 0-34.048 14.592 51.2 51.2 0 0 0 0 70.656l387.072 401.92a46.848 46.848 0 0 0 68.096 0 51.2 51.2 0 0 0 0-70.656l-387.072-401.92A47.104 47.104 0 0 0 512 262.4z" fill="#d81e06" p-id="2130"></path><path d="M512 262.4a47.104 47.104 0 0 0-34.048 14.592L90.88 678.912a51.2 51.2 0 0 0 0 70.656 46.848 46.848 0 0 0 68.096 0l387.072-401.92a51.2 51.2 0 0 0 0-70.656A47.104 47.104 0 0 0 512 262.4z" fill="#d81e06" p-id="2131"></path></svg>
-        <span id="db" class="right_if">顶部</span>
+        <span id="db" onclick="to_top()" class="right_if">顶部</span>
     
     </div>
         
@@ -3553,7 +3553,7 @@
         <span class="a4 miaosha_span3">【前2000名抢免单】【下单再送保温杯】秋冬新款羽绒服白鸭绒休闲百搭羽绒服外套 16050黑色 XL</span>
         <div class="price">
             <span class="price-miaosha plain"><i>¥</i><span>99.00</span></span>
-            <span class="price-origin"><i>¥</i><span>299.00</span></span>
+            <p style="text-decoration-line: line-through;margin:2px 15px 0 0;float:right;" class="price-origin"><i>¥</i><span>299.00</span></p>
         </div>   
     </a>
 
@@ -3562,7 +3562,7 @@
         <span class="a4 miaosha_span3">【前2000名抢免单】【下单再送保温杯】秋冬新款羽绒服白鸭绒休闲百搭羽绒服外套 16050黑色 XL</span>
         <div class="price">
             <span class="price-miaosha"><i>¥</i><span>99.00</span></span>
-            <span class="price-origin"><i>¥</i><span>299.00</span></span>
+            <p style="text-decoration-line: line-through;margin:2px 15px 0 0;float:right;" class="price-origin"><i>¥</i><span>299.00</span></p>
         </div>   
     </a>
 
@@ -3571,7 +3571,7 @@
         <span class="a4 miaosha_span3">【前2000名抢免单】【下单再送保温杯】秋冬新款羽绒服白鸭绒休闲百搭羽绒服外套 16050黑色 XL</span>
         <div class="price">
             <span class="price-miaosha"><i>¥</i><span>99.00</span></span>
-            <span class="price-origin"><i>¥</i><span>299.00</span></span>
+            <p style="text-decoration-line: line-through;margin:2px 15px 0 0;float:right;" class="price-origin"><i>¥</i><span>299.00</span></p>
         </div>   
     </a>
 
@@ -3579,17 +3579,17 @@
         <img src="http://img13.360buyimg.com/jdcms/s150x150_jfs/t1/143806/35/5593/190985/5f3a7637E8f9e094c/848edc153dc2b4bd.jpg.webp%22" class="miaosha_img"  style="background-color: rgb(196, 18, 18);">
         <span class="a4 miaosha_span3">【前2000名抢免单】【下单再送保温杯】秋冬新款羽绒服白鸭绒休闲百搭羽绒服外套 16050黑色 XL</span>
         <div class="price">
-            <span class="price-miaosha plain"><i>¥</i><span>99.00</span></span>
-            <span class="price-origin line plain"><i>¥</i><span >299.00</span></span>
+            <span class="price-miaosha"><i>¥</i><span>99.00</span></span>
+            <p style="text-decoration-line: line-through;margin:2px 15px 0 0;float:right;" class="price-origin"><i>¥</i><span>299.00</span></p>
         </div>   
     </a>
 
-       <a class="miaosha_a">
+    <a class="miaosha_a">
         <img src="http://img13.360buyimg.com/jdcms/s150x150_jfs/t1/143806/35/5593/190985/5f3a7637E8f9e094c/848edc153dc2b4bd.jpg.webp%22" class="miaosha_img"  style="background-color: rgb(196, 18, 18);">
         <span class="a4 miaosha_span3">【前2000名抢免单】【下单再送保温杯】秋冬新款羽绒服白鸭绒休闲百搭羽绒服外套 16050黑色 XL</span>
         <div class="price">
-            <span class="price-miaosha plain"><i>¥</i><span>99.00</span></span>
-            <span class="price-origin plain"><i>¥</i><span>299.00</span></span>
+            <span class="price-miaosha"><i>¥</i><span>99.00</span></span>
+            <p style="text-decoration-line: line-through;margin:2px 15px 0 0;float:right;" class="price-origin"><i>¥</i><span>299.00</span></p>
         </div>   
     </a>
 </div>
@@ -3610,65 +3610,65 @@
 <div style="float:left;position:relative;bottom:0;">
         <p class="copyright_pp">
             <a class="copyright_p">关于我们</a>
-            <span class="">|</span>
+            <span>|</span>
             <a  class="copyright_p" href="//about.jd.com/contact" target="_blank" >联系我们</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//help.jd.com/user/custom.html" target="_blank" >联系客服</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//lai.jd.com" target="_blank" >合作招商</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//helpcenter.jd.com/venderportal/index.html" target="_blank" >商家帮助</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//jzt.jd.com" target="_blank" >营销中心</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//app.jd.com/" target="_blank" >手机京东</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//club.jd.com/links.aspx" target="_blank" >友情链接</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//media.jd.com/" target="_blank" >销售联盟</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//pro.jd.com/mall/active/3WA2zN8wkwc9fL9TxAJXHh5Nj79u/index.html" target="_blank" >京东社区</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//pro.jd.com/mall/active/3TF25tMdrnURET8Ez1cW9hzfg3Jt/index.html" target="_blank" >风险监测</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//about.jd.com/privacy/" target="_blank" >隐私政策</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//gongyi.jd.com" target="_blank" >京东公益</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//www.joybuy.com/" target="_blank" >English Site</a>
-            <span class="   ">|</span>
+            <span>|</span>
             <a class="copyright_p" href="//corporate.jd.com" target="_blank" >Media &amp; IR</a></p>
 
             <p class="copyright_pp copyright_p9">
                 <a class="copyright_p9" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000088" target="_blank" >京公网安备 11000002000088号</a>
-                        <span class="   ">|</span>
+                        <span>|</span>
                         <span>京ICP证070359号</span>
-                        <span class="   ">|</span>
+                        <span>|</span>
                         <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//img30.360buyimg.com/poprx/jfs/t1/45702/1/7206/3652062/5d4d3f4fE7ea82da4/207332da28ae8230.png" target="_blank" >互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>
-                        <span class="   ">|</span><span>&nbsp;新出发京零&nbsp;字第大120007号</span></p>
+                        <span>|</span><span>&nbsp;新出发京零&nbsp;字第大120007号</span></p>
                         <p class="copyright_pp copyright_p9">
-                            <span>互联网出版许可证编号新出网证(京)字150号&nbsp;</span><span class="   ">|</span>
+                            <span>互联网出版许可证编号新出网证(京)字150号&nbsp;</span><span>|</span>
                             <a  class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//pro.jd.com/mall/active/3bVDLXHdwVmdQksGF8TtS7ocq1NY/index.html" target="_blank" >出版物经营许可证&nbsp;</a>
-                            <span class="   ">|</span>
+                            <span>|</span>
                             <a  class="copyright_p9"  href="//misc.360buyimg.com/wz/wlwhjyxkz.jpg" target="_blank" >网络文化经营许可证京网文[2014]2148-348号&nbsp;</a><span class="   ">|</span>
                             <span>违法和不良信息举报电话：4006561155</span></p>
                             
                             <p class="copyright_pp copyright_p9"><span>Copyright&nbsp;©&nbsp;2004&nbsp;-&nbsp;2020&nbsp;&nbsp;京东JD.com&nbsp;版权所有</span>
-                                <span class="  ">|</span><span>&nbsp;消费者维权热线：4006067733</span>
+                                <span>|</span><span>&nbsp;消费者维权热线：4006067733</span>
                                 <a class="copyright_p9"href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//pro.jd.com/mall/active/38PitHBfR7ZopNHRSHnuuWR5AMDL/index.html" target="_blank"  class="">&nbsp;&nbsp;经营证照&nbsp;</a>
-                                <span class="  ">|</span><span>&nbsp;(京)网械平台备字(2018)第00003号</span>
-                                <span class="  ">|</span>
+                                <span>|</span><span>&nbsp;(京)网械平台备字(2018)第00003号</span>
+                                <span>|</span>
                                 <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//storage.jd.com/imgtools/cbdaa22553-dccaf290-d1af-11e8-a840-89f99f5f0056.jpeg" target="_blank"  class="">营业执照</a>
                             </p>
                         
                        <div class=""><p class="copyright_pp"><a class="copyright_p9"  href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//www.joybuy.com/?source=1&amp;visitor_from=3" target="_blank">
-                                <img src="xby.png">&nbsp;Global Site</a><span class="  ">|</span>
+                                <img src="xby.png">&nbsp;Global Site</a><span>|</span>
                                 <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//www.jd.ru/?source=1&amp;visitor_from=3" target="_blank">
                                 <img src="xby.png">&nbsp;Сайт России</a>
-                                <span class="   ">|</span>
+                                <span>|</span>
                                 <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//www.jd.id/?source=1&amp;visitor_from=3" target="_blank"  >
                                 <img src="xby.png">&nbsp;Situs Indonesia</a>
-                                <span class="  ">|</span>
+                                <span>|</span>
                                 <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//www.joybuy.es/?source=1&amp;visitor_from=3" target="_blank">
                                 <img src="xby.png">&nbsp;Sitio de España</a><span class="   ">|</span>
                                 <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//www.jd.co.th/?source=1&amp;visitor_from=3" target="_blank"  >
@@ -3678,7 +3678,7 @@
 
                                 <p class="copyright_pp copyright_p9">
                                 <span>京东旗下网站：</span><a class="copyright_p9" href="https://www.jdpay.com/" target="_blank" >京东钱包</a>
-                                <span class="   ">|</span><a class="copyright_p9" href="http://www.jdcloud.com" target="_blank" >京东智联云</a>
+                                <span>|</span><a class="copyright_p9" href="http://www.jdcloud.com" target="_blank" >京东智联云</a>
                             </p> 
                     </p>
                     <img style="margin-top:30px" src="Screenshot_2020-11-16.png">

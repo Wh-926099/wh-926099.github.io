@@ -485,8 +485,11 @@ $(document).ready(function(){
     $("#ticketa").css("display","block"); 
     
    
-
-      $("#close").click()(function(){$("#pbb").hide();$("#pba").hide();$(".tf").show(); });
+    $("#db").click(function(){
+      $("#whf").scrollTop(0);
+    });
+    
+    $("#close").click()(function(){$("#pbb").hide();$("#pba").hide();$(".tf").show(); });
   
   });
     $("#pbc1").hover(function(){$("#pbc").show();$("#pbb").hide();$("#pbd").hide();});
