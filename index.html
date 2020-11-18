@@ -14,13 +14,14 @@
 <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
-<body> <div style="width:1349px">
+<body  onload="startTime()"> <div style="width:1349px">
     <div class="right_xd_content">
         <a class="right_xd" onclick="right_content_close();right_content_open()"></a>
     </div>
     
     <div class="search_hide">
         <a class="search_logo_lk"></a>
+
         <div class="dsearch" style="margin-top:0;margin-left:150px;">
             <input class="search" type="text"><i style="color:rgba(0, 0, 0, 0.192)" class="fa fa-camera"></i></input>
         </div>
@@ -35,6 +36,29 @@
             <a class="a3" href="">我的购物车</a></div>
         </div>
     </div>
+
+    <div class="search_hide1">
+        <span style="padding:15px 0px 0px 0px;color: #E1251B;">京东</span><span style="color: #E1251B;">秒杀</span><hr class="h">
+        <span class="right_if1"><span style="padding:15px 0px 0px 0px;">特色</span><span>优选</span></span><hr class="h">
+        <span class="right_if1"><span style="padding:15px 0px 0px 0px;">频道</span><span>广场</span></span><hr class="h">
+        <span class="right_if1"><span style="padding:15px 0px 0px 0px;">为你</span><span>推荐</span></span>  <hr class="h">
+        
+        <svg id="svg_red1" style="margin-left:6px;" t="1605514925922" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2080" width="16" height="16"><path d="M501.248 915.456c-155.648 0-299.008-91.136-365.568-232.448-4.608-10.24-0.512-22.528 9.728-27.136 10.24-4.608 22.528-0.512 27.136 9.728 59.392 126.976 188.416 208.896 328.192 208.896 199.68 0 362.496-162.304 362.496-362.496s-162.304-362.496-362.496-362.496c-126.464 0-245.76 67.584-310.784 176.128-5.632 9.728-18.432 12.8-28.16 7.168s-12.8-18.432-7.168-28.16c72.704-120.832 205.312-196.096 346.112-196.096 222.208 0 403.456 180.736 403.456 403.456s-180.736 403.456-402.944 403.456z" fill="#2c2c2c" p-id="2081"></path><path d="M897.536 585.216c-5.632 0-10.752-1.024-15.872-2.56-10.752-3.584-16.384-15.36-12.8-26.112 3.584-10.752 15.36-16.384 26.112-12.8 1.024 0.512 2.048 0.512 2.56 0.512 11.776 0 29.184-27.648 29.184-69.12s-17.92-69.12-29.184-69.12c-4.608 0-9.216 4.608-11.264 7.168-7.168 8.704-20.48 9.728-28.672 2.048-8.704-7.168-9.728-20.48-2.048-28.672 12.288-13.824 26.624-20.992 42.496-20.992 39.936 0 70.144 47.616 70.144 110.08-0.512 62.464-30.72 109.568-70.656 109.568zM126.464 585.216c-39.936 0-70.144-47.616-70.144-110.08 0-62.976 30.208-110.08 70.144-110.08s70.144 47.616 70.144 110.08c0.512 62.976-29.696 110.08-70.144 110.08z m0-179.712c-11.776 0-29.184 27.648-29.184 69.12s17.92 69.12 29.184 69.12 29.184-27.648 29.184-69.12-17.408-69.12-29.184-69.12z" fill="#2c2c2c" p-id="2082"></path><path d="M501.248 751.104c-152.064 0-292.864-64.512-378.88-174.08-7.168-8.704-5.632-22.016 3.584-28.672s22.016-5.632 28.672 3.584c80.896 102.912 215.552 162.304 360.448 158.208 11.264 0 20.48 8.704 20.992 19.968 0.512 11.264-8.704 20.48-19.968 20.992h-14.848z" fill="#2c2c2c" p-id="2083"></path><path d="M444.416 372.736a42.496 34.816 90 1 0 69.632 0 42.496 34.816 90 1 0-69.632 0Z" fill="#2c2c2c" p-id="2084"></path><path d="M506.382202 731.207168a41.984 38.912 88.394 1 0 77.793429-2.18112 41.984 38.912 88.394 1 0-77.793429 2.18112Z" fill="#2c2c2c" p-id="2085"></path><path d="M684.032 368.128a42.496 34.816 90 1 0 69.632 0 42.496 34.816 90 1 0-69.632 0Z" fill="#2c2c2c" p-id="2086"></path><path d="M613.376 590.336c-40.96 0-77.824-20.992-98.816-55.808-5.632-9.728-2.56-22.016 7.168-28.16 9.728-5.632 22.016-2.56 28.16 7.168 13.824 22.528 37.376 35.84 63.488 35.84s50.176-13.312 63.488-35.84c5.632-9.728 18.432-12.8 28.16-7.168s12.8 18.432 7.168 28.16c-21.504 34.816-58.368 55.808-98.816 55.808z" fill="#2c2c2c" p-id="2087"></path></svg>
+        <svg id="svg_red11" style="margin-bottom:5px;margin-left:6px;display:none;" t="1605693313323" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4379" width="16" height="16"><path d="M501.248 915.456c-155.648 0-299.008-91.136-365.568-232.448-4.608-10.24-0.512-22.528 9.728-27.136 10.24-4.608 22.528-0.512 27.136 9.728 59.392 126.976 188.416 208.896 328.192 208.896 199.68 0 362.496-162.304 362.496-362.496s-162.304-362.496-362.496-362.496c-126.464 0-245.76 67.584-310.784 176.128-5.632 9.728-18.432 12.8-28.16 7.168s-12.8-18.432-7.168-28.16c72.704-120.832 205.312-196.096 346.112-196.096 222.208 0 403.456 180.736 403.456 403.456s-180.736 403.456-402.944 403.456z" fill="#d81e06" p-id="4380"></path><path d="M897.536 585.216c-5.632 0-10.752-1.024-15.872-2.56-10.752-3.584-16.384-15.36-12.8-26.112 3.584-10.752 15.36-16.384 26.112-12.8 1.024 0.512 2.048 0.512 2.56 0.512 11.776 0 29.184-27.648 29.184-69.12s-17.92-69.12-29.184-69.12c-4.608 0-9.216 4.608-11.264 7.168-7.168 8.704-20.48 9.728-28.672 2.048-8.704-7.168-9.728-20.48-2.048-28.672 12.288-13.824 26.624-20.992 42.496-20.992 39.936 0 70.144 47.616 70.144 110.08-0.512 62.464-30.72 109.568-70.656 109.568zM126.464 585.216c-39.936 0-70.144-47.616-70.144-110.08 0-62.976 30.208-110.08 70.144-110.08s70.144 47.616 70.144 110.08c0.512 62.976-29.696 110.08-70.144 110.08z m0-179.712c-11.776 0-29.184 27.648-29.184 69.12s17.92 69.12 29.184 69.12 29.184-27.648 29.184-69.12-17.408-69.12-29.184-69.12z" fill="#d81e06" p-id="4381"></path><path d="M501.248 751.104c-152.064 0-292.864-64.512-378.88-174.08-7.168-8.704-5.632-22.016 3.584-28.672s22.016-5.632 28.672 3.584c80.896 102.912 215.552 162.304 360.448 158.208 11.264 0 20.48 8.704 20.992 19.968 0.512 11.264-8.704 20.48-19.968 20.992h-14.848z" fill="#d81e06" p-id="4382"></path><path d="M444.416 372.736a42.496 34.816 90 1 0 69.632 0 42.496 34.816 90 1 0-69.632 0Z" fill="#d81e06" p-id="4383"></path><path d="M506.382202 731.207168a41.984 38.912 88.394 1 0 77.793429-2.18112 41.984 38.912 88.394 1 0-77.793429 2.18112Z" fill="#d81e06" p-id="4384"></path><path d="M684.032 368.128a42.496 34.816 90 1 0 69.632 0 42.496 34.816 90 1 0-69.632 0Z" fill="#d81e06" p-id="4385"></path><path d="M613.376 590.336c-40.96 0-77.824-20.992-98.816-55.808-5.632-9.728-2.56-22.016 7.168-28.16 9.728-5.632 22.016-2.56 28.16 7.168 13.824 22.528 37.376 35.84 63.488 35.84s50.176-13.312 63.488-35.84c5.632-9.728 18.432-12.8 28.16-7.168s12.8 18.432 7.168 28.16c-21.504 34.816-58.368 55.808-98.816 55.808z" fill="#d81e06" p-id="4386"></path></svg>
+        <span id="kf" class="right_if">客服</span> <hr class="h">
+        
+        <svg id="svg_red2" style="margin-left:6px;" t="1605691508746" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1204" width="23" height="23"><path  d="M288.512 569.259l125.525 80.938-23.125 35.84-125.525-80.896z m158.55-312.406l164.991 98.219-21.802 36.65-164.992-98.218z m69.375 430.08l313.6-0.085 1.707 39.296-313.6 0.085-1.707-39.253z m103.467-124.885l212.181 0.555 1.707 39.296-212.181-0.555-1.707-39.296z" fill="#2c2c2c" p-id="1205"></path><path d="M244.736 777.387L231.04 577.92l214.485-353.493c24.15-41.814 73.6-55.04 115.414-30.934l56.362 29.099c20.907 12.032 34.688 30.464 40.192 51.072 5.547 20.608 2.816 43.392-10.368 60.16L427.691 701.867l-182.955 75.52z m30.037-184.704L285.056 713.6 403.2 659.84l208.47-342.955c6.015-10.453 7.935-19.797 5.717-28.032-3.328-12.373-9.643-19.498-20.054-25.514l-56.448-29.099a41.259 41.259 0 0 0-57.685 15.488L274.773 592.64z" fill="#2c2c2c" p-id="1206"></path></svg>
+        <svg id="svg_red22" style="margin-bottom:5px;margin-left:6px;display:none;"  t="1605693693084" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6731" width="23" height="23"><path d="M288.512 569.259l125.525 80.938-23.125 35.84-125.525-80.896z m158.55-312.406l164.991 98.219-21.802 36.65-164.992-98.218z m69.375 430.08l313.6-0.085 1.707 39.296-313.6 0.085-1.707-39.253z m103.467-124.885l212.181 0.555 1.707 39.296-212.181-0.555-1.707-39.296z" fill="#d81e06" p-id="6732"></path><path d="M244.736 777.387L231.04 577.92l214.485-353.493c24.15-41.814 73.6-55.04 115.414-30.934l56.362 29.099c20.907 12.032 34.688 30.464 40.192 51.072 5.547 20.608 2.816 43.392-10.368 60.16L427.691 701.867l-182.955 75.52z m30.037-184.704L285.056 713.6 403.2 659.84l208.47-342.955c6.015-10.453 7.935-19.797 5.717-28.032-3.328-12.373-9.643-19.498-20.054-25.514l-56.448-29.099a41.259 41.259 0 0 0-57.685 15.488L274.773 592.64z" fill="#d81e06" p-id="6733"></path></svg>
+        <span id="fk" class="right_if">反馈</span>  <hr class="h">
+        
+        <svg id="svg_red3" style="margin-left:6px;" t="1605691681182" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2129" width="20" height="20"><path d="M512 262.4a47.104 47.104 0 0 0-34.048 14.592 51.2 51.2 0 0 0 0 70.656l387.072 401.92a46.848 46.848 0 0 0 68.096 0 51.2 51.2 0 0 0 0-70.656l-387.072-401.92A47.104 47.104 0 0 0 512 262.4z" fill="#2c2c2c" p-id="2130"></path><path d="M512 262.4a47.104 47.104 0 0 0-34.048 14.592L90.88 678.912a51.2 51.2 0 0 0 0 70.656 46.848 46.848 0 0 0 68.096 0l387.072-401.92a51.2 51.2 0 0 0 0-70.656A47.104 47.104 0 0 0 512 262.4z" fill="#2c2c2c" p-id="2131"></path></svg>
+        <svg id="svg_red33" style="margin-bottom:5px;margin-left:6px;display:none;" t="1605691681182" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2129" width="20" height="20"><path d="M512 262.4a47.104 47.104 0 0 0-34.048 14.592 51.2 51.2 0 0 0 0 70.656l387.072 401.92a46.848 46.848 0 0 0 68.096 0 51.2 51.2 0 0 0 0-70.656l-387.072-401.92A47.104 47.104 0 0 0 512 262.4z" fill="#d81e06" p-id="2130"></path><path d="M512 262.4a47.104 47.104 0 0 0-34.048 14.592L90.88 678.912a51.2 51.2 0 0 0 0 70.656 46.848 46.848 0 0 0 68.096 0l387.072-401.92a51.2 51.2 0 0 0 0-70.656A47.104 47.104 0 0 0 512 262.4z" fill="#d81e06" p-id="2131"></path></svg>
+        <span id="db" class="right_if">顶部</span>
+    
+    </div>
+        
+        
+
 
     <div class="dtop">
     <div class="dtop2">
@@ -374,7 +398,7 @@
 
                                             <div style="width: 730px;height:36px">
                                             <div class="dsearch">
-                                                <input class="search" type="text"><i style="color:rgba(0, 0, 0, 0.192)" class="fa fa-camera"></i></input>
+                                                <input id="search_input" placeholder="电动自行车"  class="search" type="text"><i style="color:rgba(0, 0, 0, 0.192)" class="fa fa-camera"></i></input>
                                             </div>
                                             <div class="dsearchsmall"> 
 <button class="search"><i style="color:white;font-size: 18px;" class="fa fa-search"></i></button>
@@ -413,7 +437,7 @@
                                     <div class="qydropdown51 dsj11" style="margin-left: 250px;">
                                         <img class=" dropbtn isj1" src="https://img12.360buyimg.com/img/jfs/t1/67481/15/565/28110/5cec9234E71c47244/dc4cf353fd96922e.png.webp">  
                                      
-                                        <div class="qydropdown51-content" style="margin-top: 100px;">
+                                        <div class="pan qydropdown51-content" >
 
                                             <div style=" height: 100px;">
                                             <div class="dsj1" >
@@ -494,7 +518,6 @@
 
     <div id="top" class="topw row clearfix">
             <div  class="top col-md-12 column">
-
             <div style="float:left;background-color: #ffffff;width: 190px;height: 470px;">
 
                 <ol class="ol1">
@@ -3398,15 +3421,15 @@
                 </div>
                         <div class="tf" >
                             <a id="1hf" class="a12">
-                                <img style="width: 28px;" src="https://m.360buyimg.com/babel/jfs/t1/30057/19/14881/720/5cbf064aE187b8361/eed6f6cbf1de3aaa.png"> 
+                                <img id="hf" style="transition-delay:0.5s;width: 28px;" src="https://m.360buyimg.com/babel/jfs/t1/30057/19/14881/720/5cbf064aE187b8361/eed6f6cbf1de3aaa.png"> 
                                <span class="span2">&nbsp;话费</span>
                             </a>
                             <a id="2jp" class="a12">
-                                <img style="width: 28px;" src="https://m.360buyimg.com/babel/jfs/t1/36478/38/5384/2901/5cbf065aEb0c60a12/afb4399323fe3b76.png"> 
+                                <img id="jp" style="width: 28px;" src="https://m.360buyimg.com/babel/jfs/t1/36478/38/5384/2901/5cbf065aEb0c60a12/afb4399323fe3b76.png"> 
                                 <span class="span2">&nbsp;机票</span> 
                             </a>    
                              <a id="3jd" class="a12">
-                                <img style="width: 28px;" src="https://m.360buyimg.com/babel/jfs/t1/31069/34/14642/979/5cbf0665Ec7dc8223/5fee386254dd2ebc.png"> 
+                                <img id="hf" style="width: 28px;" src="https://m.360buyimg.com/babel/jfs/t1/31069/34/14642/979/5cbf0665Ec7dc8223/5fee386254dd2ebc.png"> 
                               <span class="span2">&nbsp;酒店</span>
                             </a>
                             <a id="4yx" class="a12">
@@ -3464,7 +3487,7 @@
 
                             <div id="pbb" style="padding:0px 4px 20px 8px;">
                                 <span class="span4">号码</span><input placeholder="移动/联通/电信" class="ipt" type="text"></input>
-                                <span class="span4" style="margin-right:0px;">面值</span> 
+                                <span class="span4" style="margin-right:10px;">面值</span> 
                                 <form> 
                                     <select id="" name="select">
                                     <option value="10">10元</option>
@@ -3498,14 +3521,169 @@
                                 <a class="a5_redbutton">办理变更</a>
                                 <p><a class="a5_bluebutton">HOT</a> <a class="a6_blue">中国联通199全国不限量</a></p> 
                             </div>
+
+                            <div id="ticketa" style="float:left;display: none;">
+                                <a id="pbb1" class="a4">国内机票</a>
+                                <a id="pbc1" class="a4">国际/港澳台</a>
+                                <a id="pbd1" class="a4">特惠</a>
+                        </div>
+                       <a   id="close" ><svg style="cursor:pointer;margin-left:50%" t="1605148316139" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1565" width="16" height="16"><path d="M540.672 512l303.104-303.104c8.192-8.192 8.192-20.48 0-28.672s-20.48-8.192-28.672 0l-303.104 303.104L208.896 180.224c-8.192-8.192-20.48-8.192-28.672 0s-8.192 20.48 0 28.672l303.104 303.104-303.104 303.104c-8.192 8.192-8.192 20.48 0 28.672 4.096 4.096 8.192 4.096 16.384 4.096s12.288 0 16.384-4.096l303.104-303.104 303.104 303.104c4.096 4.096 8.192 4.096 16.384 4.096s12.288 0 16.384-4.096c8.192-8.192 8.192-20.48 0-28.672L540.672 512z" p-id="1566"></path></svg></a> 
                         </div>            
             </div>
     </div>
-    
-   
-
-    
 </div>
+
+<div style="margin-left: 90px;background-color: rgb(255, 255, 255);width:100%;height: 260px;">
+    <div class="miaosha" >
+        <h2 class="miaosha_text" style="padding-top: 30px;">京东秒杀</h2>
+        <h4 class="miaosha_text" style="padding-top: 100px;"><span class="miaosha_text" style="padding-top: 100px;" id="txt"></span> 场倒计时</h4>
+        <a></a>
+    
+
+       <p style="height: 30px;text-align: center;"> <span class="miaosha_span"id="txt1"></span> 
+        <span class="miaosha_span1">:</span> 
+        <span class="miaosha_span"id="txt2"></span> 
+        <span class="miaosha_span1">:</span> 
+        <span class="miaosha_span"id="txt3"></span></p>
+    </div>
+
+    <a class="miaosha_a">
+        <img src="http://img14.360buyimg.com/seckillcms/s140x140_jfs/t1/151839/2/4955/198346/5fa4bfbaE5f11ba59/930c5d2fdf69b073.jpg.webp"
+         style="margin:0 20px 5px 20px;width: 140px;height: 140px;background-color: rgb(196, 18, 18);">
+        <span class="a4 miaosha_span3">【前2000名抢免单】【下单再送保温杯】秋冬新款羽绒服白鸭绒休闲百搭羽绒服外套 16050黑色 XL</span>
+        <div class="price">
+            <span class="price-miaosha plain"><i>¥</i><span>99.00</span></span>
+            <span class="price-origin"><i>¥</i><span>299.00</span></span>
+        </div>   
+    </a>
+
+    <a class="miaosha_a">
+        <img src="http://img14.360buyimg.com/seckillcms/s140x140_jfs/t1/137401/2/15671/91682/5fab9d6dE84e4f1fa/b776123afbe29c75.jpg.webp" class="miaosha_img"  style="background-color: rgb(196, 18, 18);">
+        <span class="a4 miaosha_span3">【前2000名抢免单】【下单再送保温杯】秋冬新款羽绒服白鸭绒休闲百搭羽绒服外套 16050黑色 XL</span>
+        <div class="price">
+            <span class="price-miaosha"><i>¥</i><span>99.00</span></span>
+            <span class="price-origin"><i>¥</i><span>299.00</span></span>
+        </div>   
+    </a>
+
+    <a class="miaosha_a">
+        <img src="http://img13.360buyimg.com/seckillcms/s140x140_jfs/t1/145403/20/14032/133715/5fabb740E1fd9cfb8/e30d53aebe0fbee7.jpg.webp" class="miaosha_img" style="background-color: rgb(196, 18, 18);">
+        <span class="a4 miaosha_span3">【前2000名抢免单】【下单再送保温杯】秋冬新款羽绒服白鸭绒休闲百搭羽绒服外套 16050黑色 XL</span>
+        <div class="price">
+            <span class="price-miaosha"><i>¥</i><span>99.00</span></span>
+            <span class="price-origin"><i>¥</i><span>299.00</span></span>
+        </div>   
+    </a>
+
+    <a class="miaosha_a">
+        <img src="http://img13.360buyimg.com/jdcms/s150x150_jfs/t1/143806/35/5593/190985/5f3a7637E8f9e094c/848edc153dc2b4bd.jpg.webp%22" class="miaosha_img"  style="background-color: rgb(196, 18, 18);">
+        <span class="a4 miaosha_span3">【前2000名抢免单】【下单再送保温杯】秋冬新款羽绒服白鸭绒休闲百搭羽绒服外套 16050黑色 XL</span>
+        <div class="price">
+            <span class="price-miaosha plain"><i>¥</i><span>99.00</span></span>
+            <span class="price-origin line plain"><i>¥</i><span >299.00</span></span>
+        </div>   
+    </a>
+
+       <a class="miaosha_a">
+        <img src="http://img13.360buyimg.com/jdcms/s150x150_jfs/t1/143806/35/5593/190985/5f3a7637E8f9e094c/848edc153dc2b4bd.jpg.webp%22" class="miaosha_img"  style="background-color: rgb(196, 18, 18);">
+        <span class="a4 miaosha_span3">【前2000名抢免单】【下单再送保温杯】秋冬新款羽绒服白鸭绒休闲百搭羽绒服外套 16050黑色 XL</span>
+        <div class="price">
+            <span class="price-miaosha plain"><i>¥</i><span>99.00</span></span>
+            <span class="price-origin plain"><i>¥</i><span>299.00</span></span>
+        </div>   
+    </a>
+</div>
+<div style="margin:20px 0 0 90px;width:1190px;height: 260px;">
+<div style="float:left;background-color: rgb(252, 7, 7);width:590px;height: 260px;"></div>
+<div style="float:right;margin:0px 0 0 10px;background-color: rgb(102, 11, 11);width:590px;height: 260px;"></div>
+
+</div>
+
+<div style="margin:20px 0 300px 90px;width:1190px;height: 260px;">
+    <div style="float:left;background-color: rgb(252, 7, 7);width:210px;height: 322px;"></div>
+    <div style="float:left;margin:0px 0 0 15px;background-color: rgb(158, 252, 7);width:230px;height: 322px;"></div>
+    <div style="float:left;margin:0px 0 0 15px;background-color: rgb(252, 7, 232);width:230px;height: 322px;"></div>
+    <div style="float:left;margin:0px 0 0 15px;background-color: rgb(102, 11, 11);width:230px;height: 322px;"></div>
+    <div style="float:left;margin:0px 0 0 15px;background-color: rgb(102, 11, 11);width:230px;height: 322px;"></div>
+    
+    </div>
+<div style="float:left;position:relative;bottom:0;">
+        <p class="copyright_pp">
+            <a class="copyright_p">关于我们</a>
+            <span class="">|</span>
+            <a  class="copyright_p" href="//about.jd.com/contact" target="_blank" >联系我们</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//help.jd.com/user/custom.html" target="_blank" >联系客服</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//lai.jd.com" target="_blank" >合作招商</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//helpcenter.jd.com/venderportal/index.html" target="_blank" >商家帮助</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//jzt.jd.com" target="_blank" >营销中心</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//app.jd.com/" target="_blank" >手机京东</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//club.jd.com/links.aspx" target="_blank" >友情链接</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//media.jd.com/" target="_blank" >销售联盟</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//pro.jd.com/mall/active/3WA2zN8wkwc9fL9TxAJXHh5Nj79u/index.html" target="_blank" >京东社区</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//pro.jd.com/mall/active/3TF25tMdrnURET8Ez1cW9hzfg3Jt/index.html" target="_blank" >风险监测</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//about.jd.com/privacy/" target="_blank" >隐私政策</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//gongyi.jd.com" target="_blank" >京东公益</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//www.joybuy.com/" target="_blank" >English Site</a>
+            <span class="   ">|</span>
+            <a class="copyright_p" href="//corporate.jd.com" target="_blank" >Media &amp; IR</a></p>
+
+            <p class="copyright_pp copyright_p9">
+                <a class="copyright_p9" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000088" target="_blank" >京公网安备 11000002000088号</a>
+                        <span class="   ">|</span>
+                        <span>京ICP证070359号</span>
+                        <span class="   ">|</span>
+                        <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//img30.360buyimg.com/poprx/jfs/t1/45702/1/7206/3652062/5d4d3f4fE7ea82da4/207332da28ae8230.png" target="_blank" >互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>
+                        <span class="   ">|</span><span>&nbsp;新出发京零&nbsp;字第大120007号</span></p>
+                        <p class="copyright_pp copyright_p9">
+                            <span>互联网出版许可证编号新出网证(京)字150号&nbsp;</span><span class="   ">|</span>
+                            <a  class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//pro.jd.com/mall/active/3bVDLXHdwVmdQksGF8TtS7ocq1NY/index.html" target="_blank" >出版物经营许可证&nbsp;</a>
+                            <span class="   ">|</span>
+                            <a  class="copyright_p9"  href="//misc.360buyimg.com/wz/wlwhjyxkz.jpg" target="_blank" >网络文化经营许可证京网文[2014]2148-348号&nbsp;</a><span class="   ">|</span>
+                            <span>违法和不良信息举报电话：4006561155</span></p>
+                            
+                            <p class="copyright_pp copyright_p9"><span>Copyright&nbsp;©&nbsp;2004&nbsp;-&nbsp;2020&nbsp;&nbsp;京东JD.com&nbsp;版权所有</span>
+                                <span class="  ">|</span><span>&nbsp;消费者维权热线：4006067733</span>
+                                <a class="copyright_p9"href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//pro.jd.com/mall/active/38PitHBfR7ZopNHRSHnuuWR5AMDL/index.html" target="_blank"  class="">&nbsp;&nbsp;经营证照&nbsp;</a>
+                                <span class="  ">|</span><span>&nbsp;(京)网械平台备字(2018)第00003号</span>
+                                <span class="  ">|</span>
+                                <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//storage.jd.com/imgtools/cbdaa22553-dccaf290-d1af-11e8-a840-89f99f5f0056.jpeg" target="_blank"  class="">营业执照</a>
+                            </p>
+                        
+                       <div class=""><p class="copyright_pp"><a class="copyright_p9"  href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//www.joybuy.com/?source=1&amp;visitor_from=3" target="_blank">
+                                <img src="xby.png">&nbsp;Global Site</a><span class="  ">|</span>
+                                <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//www.jd.ru/?source=1&amp;visitor_from=3" target="_blank">
+                                <img src="xby.png">&nbsp;Сайт России</a>
+                                <span class="   ">|</span>
+                                <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//www.jd.id/?source=1&amp;visitor_from=3" target="_blank"  >
+                                <img src="xby.png">&nbsp;Situs Indonesia</a>
+                                <span class="  ">|</span>
+                                <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//www.joybuy.es/?source=1&amp;visitor_from=3" target="_blank">
+                                <img src="xby.png">&nbsp;Sitio de España</a><span class="   ">|</span>
+                                <a class="copyright_p9" href="https://www.bilibili.com/bangumi/play/ep15184?from=search&seid=48922584961967695//www.jd.co.th/?source=1&amp;visitor_from=3" target="_blank"  >
+                                <img src="xby.png">&nbsp;เว็บไซต์ประเทศไทย</a>
+                                </p>
+                                </div>
+
+                                <p class="copyright_pp copyright_p9">
+                                <span>京东旗下网站：</span><a class="copyright_p9" href="https://www.jdpay.com/" target="_blank" >京东钱包</a>
+                                <span class="   ">|</span><a class="copyright_p9" href="http://www.jdcloud.com" target="_blank" >京东智联云</a>
+                            </p> 
+                    </p>
+                    <img style="margin-top:30px" src="Screenshot_2020-11-16.png">
+
+                </div>
+</body>
 <script src="jd.js"></script>
 <script src="jquery_d.js"></script>
-</body>

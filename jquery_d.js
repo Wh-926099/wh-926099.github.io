@@ -436,9 +436,11 @@ $(document).ready(function(){
         });
         $(".iw").click(function(){
       $(".dtop").hide();
+      $(".pan").css("margin-top","10px");
     });
   
-    $("#pb").hover(function(){$("#pba").show();$("#pbb").show();});
+    $("#pb").hover(function(){
+      $("#ticketa").css("display","none");$("#pba").show();$("#pbb").show();$("#pbc").hide();$("#pbd").hide();});
     $("#pb").mouseenter(function(){
          $("#pb").css("border-bottom","solid red");
          $("#pb").css("color","red");
@@ -452,8 +454,41 @@ $(document).ready(function(){
           $("#pb2").css("color","red");
           $("#pb2").css("border-bottom","solid red");
          });
+
+    $("#kf").mouseenter(function(){
+      $("#svg_red1").hide();
+      $("#svg_red11").css("display","block");
+     });
+     $("#kf").mouseleave(function(){
+      $("#svg_red1").show();
+      $("#svg_red11").css("display","none");
+     });
+     $("#fk").mouseenter(function(){
+      $("#svg_red2").hide();
+      $("#svg_red22").css("display","block");
+     });
+     $("#fk").mouseleave(function(){
+      $("#svg_red2").show();
+      $("#svg_red22").css("display","none");
+     });
+     $("#db").mouseenter(function(){
+      $("#svg_red3").hide();
+      $("#svg_red33").css("display","block");
+     });
+     $("#db").mouseleave(function(){
+      $("#svg_red3").show();
+      $("#svg_red33").css("display","none");
+     });
+
+    $("#1hf").mouseenter(function(){ $("#hf").css("src","https://m.360buyimg.com/babel/jfs/t1/45423/33/385/778/5cd4f265E442a9342/0aff0a42cece09ee.png");});
+    $("#pb2").mouseenter(function(){$("#pba").hide();$("#pbb").hide();$("#pbc").hide();$("#pbd").hide();
+    $("#ticketa").css("display","block"); 
+    
+   
+
+      $("#close").click()(function(){$("#pbb").hide();$("#pba").hide();$(".tf").show(); });
   
-    $("#pb2").hover(function(){$("#pba").hide();$("#pbb").hide();});
+  });
     $("#pbc1").hover(function(){$("#pbc").show();$("#pbb").hide();$("#pbd").hide();});
     $("#pbb1").hover(function(){$("#pbb").show();$("#pbc").hide();$("#pbd").hide();});
     $("#pbd1").hover(function(){$("#pbd").show();$("#pbc").hide();$("#pbb").hide();});
