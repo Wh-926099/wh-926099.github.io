@@ -206,47 +206,28 @@ function showSlidesw31() {
   slidesw3[slideIndexw3 - 1].style.display = "block";
   time1 = setTimeout(showSlidesw31, 6000);
 }
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
 
-function loadXMLDoc() {
-  var xmlhttp;
-  if (window.XMLHttpRequest) {
-    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-    xmlhttp = new XMLHttpRequest();
-  } else {
-    // IE6, IE5 浏览器执行代码
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    m = checkTime(59 - m);
+    s = checkTime(59 - s);
+    var h1 = 2;
+    //while((m=59)&(s=59)){h1=h1-1;}
+    document.getElementById("txt").innerHTML = h + ":00";
+    document.getElementById("txt1").innerHTML = "0" + h1;
+    document.getElementById("txt2").innerHTML = m;
+    document.getElementById("txt3").innerHTML = s;
+    t = setTimeout(function () {
+      startTime();
+    }, 500);
   }
-  xmlhttp.onreadystatechange = function () {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-      document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+  function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
     }
-  };
-  xmlhttp.open("GET", "wh.txt", true);
-  xmlhttp.send();
-}
-
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds(); // 在小于10的数字前加一个‘0’
-
-  m = checkTime(59 - m);
-  s = checkTime(59 - s);
-  var h1 = 2;
-  //while((m=59)&(s=59)){h1=h1-1;}
-  document.getElementById("txt").innerHTML = h + ":00";
-  document.getElementById("txt1").innerHTML = "0" + h1;
-  document.getElementById("txt2").innerHTML = m;
-  document.getElementById("txt3").innerHTML = s;
-  t = setTimeout(function () {
-    startTime();
-  }, 500);
-}
-function checkTime(i) {
-  if (i < 10) {
-    i = "0" + i;
+    return i;
   }
-  return i;
-}
 
